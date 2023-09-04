@@ -231,6 +231,14 @@ function Home() {
         </div>
       </div>
     </div>
+
+    <div className="bg-[#D5828B]">
+            <div className="max-w-5xl mx-auto">
+            <h2 className="text-center text-[48px] font-normal text-white leading-[53px]">
+        BEST SELLER
+        </h2>
+            </div>
+    </div>
     </>
   );
 }
