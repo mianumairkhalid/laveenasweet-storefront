@@ -98,7 +98,7 @@ function Home() {
           SIGNATURE MENU
         </h2>
         <div className="mt-10 flex">
-          <div className="bg-[#E7EBDE] w-1/4 text-center px-8">
+          <div className="bg-[#E7EBDE] lg:w-1/4 text-center px-8">
             <img
               className="w-[34px] h-[34px] mx-auto mt-14"
               src={unitedStates1}
@@ -127,7 +127,7 @@ function Home() {
             </a>
           </div>
 
-          <div className="bg-[#FDFAF6] pb-16 w-1/4 text-center px-8">
+          <div className="bg-[#FDFAF6] pb-16 lg:w-1/4 text-center px-8">
             <img
               className="w-[34px] h-[34px] mx-auto mt-14"
               src={unitedStates2}
@@ -155,7 +155,7 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#E7EBDE] w-1/4 text-center px-8">
+          <div className="bg-[#E7EBDE] lg:w-1/4 text-center px-8">
             <img
               className="w-[34px] h-[34px] mx-auto mt-14"
               src={unitedStates3}
@@ -183,7 +183,7 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#FDFAF6] w-1/4 text-center px-8">
+          <div className="bg-[#FDFAF6] lg:w-1/4 text-center px-8">
             <img
               className="w-[34px] h-[34px] mx-auto mt-14"
               src={unitedStates4}
