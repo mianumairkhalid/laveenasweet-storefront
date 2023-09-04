@@ -256,19 +256,28 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-[#D5828B]">
+      <div className="bg-[#D5828B] py-[60px]">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-center text-[48px] font-normal text-white leading-[53px]">
             BEST SELLER
           </h2>
-          <p className="text-[20px] leading-[30px] text-white text-center">
+          <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] px-[150px]">
             Birthday Fresh cream cake from Laveena Cake Box is sure to make
             their birthday even more special.
           </p>
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between items-center mt-[100px]">
               <img src={BirthdayCake1} className="w-[295px] h-[250px] object-cover" alt="" />
               <img src={BirthdayCake2} className="w-[256px] h-[259px] object-cover"  alt="" />
               <img src={BirthdayCake3} className="w-[405px] h-[304px] object-cover"  alt="" />
+          </div>
+          
+          <div className="mt-24 text-sm text-center">
+            <a
+              href="#"
+              class="inline-block text-xl font-normal px-7 py-4 text-[#D58288] bg-white text-uppercase rounded-[10px] transition duration-200"
+            >
+              ORDER NOW
+            </a>
           </div>
         </div>
       </div>
