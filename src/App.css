@@ -204,6 +204,14 @@
 }
 
 
+.HomeMapSec {
+  background-image:url('../src/img/HomeMapSecImg.png');
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+
 
 @keyframes loadingAnim{
   from{transform:rotate(0deg)}
