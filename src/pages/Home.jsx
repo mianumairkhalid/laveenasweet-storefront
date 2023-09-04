@@ -12,39 +12,45 @@ import SanKaYa1 from "../img/San-Ka-Ya_1.png";
 import PuddingChocolateCake from "../img/PuddingChocolateCake.jpg";
 import ChocolateMousseCake from "../img/ChocolateMousseCake.jpg";
 import ORIGINALMILO from "../img/ORIGINALMILO.png";
+import BirthdayCake1 from "../img/BirthdayCake1.png";
+import BirthdayCake2 from "../img/BirthdayCake2.png";
+import BirthdayCake3 from "../img/BirthdayCake3.png";
 
 function Home() {
   const products = [
     {
       id: 1,
-      name: 'Belgium Flourless Chocolate Cake',
-      price: '149.00',
-      href: '#',
+      name: "Belgium Flourless Chocolate Cake",
+      price: "149.00",
+      href: "#",
       imageSrc: BelgiumChocolateCake,
-      imageAlt: 'Hand stitched, orange leather long wallet.',
-    },{
-      id: 1,
-      name: 'Pudding Chocolate Cake',
-      price: '500.00',
-      href: '#',
-      imageSrc: PuddingChocolateCake,
-      imageAlt: 'Hand stitched, orange leather long wallet.',
-    },{
-      id: 1,
-      name: 'Chocolate Mousse Cake',
-      price: '500.00',
-      href: '#',
-      imageSrc: ChocolateMousseCake,
-      imageAlt: 'Hand stitched, orange leather long wallet.',
-    },{
-      id: 1,
-      name: 'ORIGINAL MILO',
-      price: '500.00',
-      href: '#',
-      imageSrc: ORIGINALMILO,
-      imageAlt: 'Hand stitched, orange leather long wallet.',
+      imageAlt: "Hand stitched, orange leather long wallet.",
     },
-  ]
+    {
+      id: 1,
+      name: "Pudding Chocolate Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: PuddingChocolateCake,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+    {
+      id: 1,
+      name: "Chocolate Mousse Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: ChocolateMousseCake,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+    {
+      id: 1,
+      name: "ORIGINAL MILO",
+      price: "500.00",
+      href: "#",
+      imageSrc: ORIGINALMILO,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+  ];
   return (
     <>
       <div className="sm:flex my-20 justify-center md:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
@@ -104,7 +110,11 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
               AMERICAN WAFFLE
             </h3>
-            <img src={AmericanWaffle} className="w-[251px] h-[210px] object-cover" alt="" />
+            <img
+              src={AmericanWaffle}
+              className="w-[251px] h-[210px] object-cover"
+              alt=""
+            />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
               89.-
             </h4>
@@ -129,9 +139,13 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
               BELGIUM FLOURLESS CHOCOLATE CAKE
             </h3>
-            <img src={BelgiumChocolateCake} className="w-[251px] h-[210px] object-cover" alt="" />
+            <img
+              src={BelgiumChocolateCake}
+              className="w-[251px] h-[210px] object-cover"
+              alt=""
+            />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
-            149.-
+              149.-
             </h4>
 
             <a
@@ -153,9 +167,13 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
               COCONUT FRENCH PIE
             </h3>
-            <img src={COCONUTPIE1} className="w-[215px] h-[170px] object-cover" alt="" />
+            <img
+              src={COCONUTPIE1}
+              className="w-[215px] h-[170px] object-cover"
+              alt=""
+            />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
-            149.-
+              149.-
             </h4>
 
             <a
@@ -177,9 +195,13 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
               SAN KA YA
             </h3>
-            <img src={SanKaYa1} className="w-[251px] h-[210px] object-cover" alt="" />
+            <img
+              src={SanKaYa1}
+              className="w-[251px] h-[210px] object-cover"
+              alt=""
+            />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
-            199.-
+              199.-
             </h4>
 
             <a
@@ -193,52 +215,63 @@ function Home() {
       </div>
 
       <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-[1100px] lg:px-8">
-        <div className="">
-        <h2 className="text-center text-[48px] font-normal leading-[53px]">
-        BEST SELLER
-        </h2>
-        </div>
+        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-[1100px] lg:px-8">
+          <div className="">
+            <h2 className="text-center text-[48px] font-normal leading-[53px]">
+              BEST SELLER
+            </h2>
+          </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
-          {products.map((product) => (
-            <div key={product.id} className="group relative">
-              <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
-                <img
-                  src={product.imageSrc}
-                  className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
-                />
+          <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
+            {products.map((product) => (
+              <div key={product.id} className="group relative">
+                <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
+                  <img
+                    src={product.imageSrc}
+                    className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
+                  />
+                </div>
+                <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
+                  <a href={product.href}>
+                    <span className="absolute inset-0" />
+                    {product.name}
+                  </a>
+                </h3>
+                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                <p className="mt-2 text-base font-medium text-[#d5828b]">
+                  {product.price}
+                </p>
               </div>
-              <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
-                <a href={product.href}>
-                  <span className="absolute inset-0" />
-                  {product.name}
-                </a>
-              </h3>
-              <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-              <p className="mt-2 text-base font-medium text-[#d5828b]">{product.price}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="mt-24 text-sm text-center">
-        <a
+          <div className="mt-24 text-sm text-center">
+            <a
               href="#"
               class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               VIEW ALL MENU
             </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div className="bg-[#D5828B]">
-            <div className="max-w-5xl mx-auto">
-            <h2 className="text-center text-[48px] font-normal text-white leading-[53px]">
-        BEST SELLER
-        </h2>
-            </div>
-    </div>
+      <div className="bg-[#D5828B]">
+        <div className="max-w-[1100px] mx-auto">
+          <h2 className="text-center text-[48px] font-normal text-white leading-[53px]">
+            BEST SELLER
+          </h2>
+          <p className="text-[20px] leading-[30px] text-white text-center">
+            Birthday Fresh cream cake from Laveena Cake Box is sure to make
+            their birthday even more special.
+          </p>
+          <div className="flex justify-between items-center ">
+              <img src={BirthdayCake1} className="w-[295px] h-[250px] object-cover" alt="" />
+              <img src={BirthdayCake2} className="w-[256px] h-[259px] object-cover"  alt="" />
+              <img src={BirthdayCake3} className="w-[405px] h-[304px] object-cover"  alt="" />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
