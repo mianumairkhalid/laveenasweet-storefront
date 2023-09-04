@@ -268,10 +268,10 @@ function Home() {
           <div className="flex justify-between items-center mt-[100px]">
               <img src={BirthdayCake1} className="w-[295px] h-[250px] object-cover" alt="" />
               <img src={BirthdayCake2} className="w-[256px] h-[259px] object-cover"  alt="" />
-              <img src={BirthdayCake3} className="w-[405px] h-[304px] object-cover"  alt="" />
+              <img src={BirthdayCake3} className="w-[30px] h-[304px] object-cover"  alt="" />
           </div>
           
-          <div className="mt-24 text-sm text-center">
+          <div className="mt-[50px] text-sm text-center">
             <a
               href="#"
               class="inline-block text-xl font-normal px-7 py-4 text-[#D58288] bg-white text-uppercase rounded-[10px] transition duration-200"
