@@ -13,18 +13,13 @@
 }
 
 @font-face {
-  font-family: Eventpop;
-  src: url('../src/fonts/eventpop/eventpop-medium.ttf');
+  font-family: Copperplate;
+  src: url('../src/fonts/Copperplate Gothic/Copperplate Gothic Bold Regular.ttf');
 }
 
-@font-face {
-  font-family: Eventpop;
-  src: url('../src/fonts/eventpop/eventpop-bold.ttf');
-  font-weight: bold
-}
 
 * {
-  font-family:Eventpop, Inter
+  font-family:Copperplate, Inter
 }
 
 .info-desc ol,.info-desc ul,.info-desc menu {
@@ -196,6 +191,19 @@
   background-repeat:no-repeat;
   background-color:#F0592A;
 }
+
+
+
+/* Laveena */
+
+.footerBgImg {
+  background-image:url('../src/img/footer-bg-wood.jpg');
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+
 
 @keyframes loadingAnim{
   from{transform:rotate(0deg)}

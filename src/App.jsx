@@ -53,6 +53,9 @@ import HowRedeemReward from "./pages/HowRedeemReward";
 import MemberConditions from "./pages/MemberConditions";
 import SingleBlog from "./pages/SingleBlog";
 
+import FooterLaveena from "./components/FooterLaveena";
+import HeaderLaveena from "./components/HeaderLaveena";
+
 
 function App() {
   const navigate = useNavigate();
@@ -90,9 +93,9 @@ function App() {
     }
 
 
-    if (!getToken()) {
-      navigate("/login");
-    }
+    // if (!getToken()) {
+    //   navigate("/login");
+    // }
 
 
   },[isPhoneVerified]);
@@ -106,6 +109,7 @@ function App() {
         token: getToken,
       }}
     >
+      <HeaderLaveena />
       <UserProvider>
         <ProductsProvider>
           <CartProvider>
@@ -182,6 +186,7 @@ function App() {
           </CartProvider>
         </ProductsProvider>
       </UserProvider>
+      <FooterLaveena />
     </FrappeProvider>
   )
 }
