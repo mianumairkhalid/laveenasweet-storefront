@@ -113,6 +113,8 @@ function Home() {
   ];
   return (
     <>
+
+    
     <div className="w-full relative block h-[850px]">
     <Slider />
     </div>

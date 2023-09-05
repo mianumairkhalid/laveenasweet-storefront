@@ -55,6 +55,7 @@ import SingleBlog from "./pages/SingleBlog";
 
 import FooterLaveena from "./components/FooterLaveena";
 import HeaderLaveena from "./components/HeaderLaveena";
+import Blog from "./pages/Blog";
 
 
 function App() {
@@ -181,6 +182,10 @@ function App() {
               <Route path="/blog-admin" element={<BlogAdmin />} />
               <Route path="/blog-categories" element={<BlogCategories />} />
               <Route path="/blog-add" element={<BlogAdd />} />
+
+
+              <Route path="/blog" element={<Blog />} />
+
             </Routes>
             <Cart />
           </CartProvider>
