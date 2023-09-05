@@ -57,6 +57,7 @@ import FooterLaveena from "./components/FooterLaveena";
 import HeaderLaveena from "./components/HeaderLaveena";
 import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const navigate = useNavigate();
@@ -186,6 +187,7 @@ function App() {
 
               <Route path="/blog" element={<Blog />} />
               <Route path="/branch" element={<ContactUs />} />
+              <Route path="/laveena-about-us" element={<AboutUs />} />
 
             </Routes>
             <Cart />

@@ -138,16 +138,16 @@ export default function Example() {
             )}
           </Popover>
 
-          <a href="#" className="text-white text-[22px] font-bold hover:text-gray-900">
+          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
           Product
           </a>
-          <a href="#" className="text-white text-[22px] font-bold hover:text-gray-900">
+          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
           Blog
           </a>
-          <a href="#" className="text-white text-[22px] font-bold hover:text-gray-900">
+          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
           About Us
           </a>
-          <a href="#" className="text-white text-[22px] font-bold hover:text-gray-900">
+          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
           Contact Us
           </a>
         </Popover.Group>
