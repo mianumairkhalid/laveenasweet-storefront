@@ -56,7 +56,7 @@ import SingleBlog from "./pages/SingleBlog";
 import FooterLaveena from "./components/FooterLaveena";
 import HeaderLaveena from "./components/HeaderLaveena";
 import Blog from "./pages/Blog";
-
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const navigate = useNavigate();
@@ -185,6 +185,7 @@ function App() {
 
 
               <Route path="/blog" element={<Blog />} />
+              <Route path="/branch" element={<ContactUs />} />
 
             </Routes>
             <Cart />

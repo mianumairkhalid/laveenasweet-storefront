@@ -136,7 +136,7 @@ function FooterLaveena() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl py-4 px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto max-w-7xl py-4 px-6 lg:pl-0 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-2 md:order-2">
             <span className="text-base text-[#383838]">Follow Us:</span>
           {socialnavigation.map((item) => (
