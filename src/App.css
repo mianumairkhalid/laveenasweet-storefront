@@ -18,8 +18,16 @@
 }
 
 
-* {
+.fontCopperplate {
   font-family:Copperplate, Inter
+}
+
+.fontDMSans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  font-family:'Noto Sans Thai';
 }
 
 .info-desc ol,.info-desc ul,.info-desc menu {

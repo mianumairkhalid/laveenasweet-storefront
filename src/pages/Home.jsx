@@ -1,4 +1,6 @@
 import React from "react";
+import Slider from '../components/Slider';
+
 import bannerTop1 from "../img/bannerTop1.png";
 import bannerTop2 from "../img/bannerTop2.png";
 import unitedStates1 from "../img/united-states-1.png";
@@ -16,7 +18,16 @@ import BirthdayCake1 from "../img/BirthdayCake1.png";
 import BirthdayCake2 from "../img/BirthdayCake2.png";
 import BirthdayCake3 from "../img/BirthdayCake3.png";
 
+import blogImg1 from "../img/blogImg1.jpeg";
+import blogImg2 from "../img/blogImg2.jpeg";
+import blogImg3 from "../img/blogImg3.jpeg";
+
+
+
 function Home() {
+
+
+
   const products = [
     {
       id: 1,
@@ -51,17 +62,75 @@ function Home() {
       imageAlt: "Hand stitched, orange leather long wallet.",
     },
   ];
+
+  const posts = [
+    {
+      title: "I AM LAVEENA",
+      href: "#",
+      category: { name: "Article", href: "#" },
+      description:
+        "จาก…นักออกแบบบรรจุภัณฑ์ สู่…นักออกแบบขนม สู่…ความฝัน QUEEN OF PANDAN",
+      date: "06/20/2022",
+      imageUrl:blogImg1,
+      author: {
+        name: "Roel Aufderehar",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+    },
+    {
+      title: "เบลเยี่ยมช็อคโกแล็ตไร้แป้ง",
+      href: "#",
+      category: { name: "Video", href: "#" },
+      description:
+        "Belgium Flourless Chocolate Cakeเค้กช็อคโกแล็ต ชื่อ “Flourless Chocolate Cake” หรือเรียกเป็นภาษาฝรั่งเศสว่า “Fondant",
+      date: "06/20/2022",
+      datetime: "2020-03-10",
+      imageUrl:
+      blogImg2,
+      author: {
+        name: "Brenna Goyette",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+    },
+    {
+      title: "เรื่อง ของ เนย",
+      href: "#",
+      category: { name: "Case Study", href: "#" },
+      description:"B U T T E R “ เนย “ เกิดจากการเขย่า",
+        date: "06/20/2022",
+      imageUrl:blogImg3,
+      author: {
+        name: "Daniela Metz",
+        href: "#",
+        imageUrl:
+          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+    },
+  ];
   return (
     <>
+    <div className="w-full relative block h-[850px]">
+    <Slider />
+    </div>
+
+
+
       <div className="sm:flex my-20 justify-center md:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
         <div className="sm:w-1/2">
           <img className="rounded-2xl" src={bannerTop1} alt="" />
         </div>
         <div className="sm:w-1/2 sm:pl-[120px] sm:pr-[20px]">
-          <h2 className="text-[48px] font-normal leading-[48px] text-black">
+          <h2 className="text-[48px] font-normal leading-[48px] text-black fontCopperplate">
             FINEST AMERICAN BAKING
           </h2>
-          <p className="text-[20px] mt-5 font-normal leading-[30px] text-black">
+          <p
+            className="text-[20px] mt-5 font-normal leading-[30px] text-black"
+            style={{ fontFamily: "Noto Sans Thai" }}
+          >
             “Laveena” ปรุงขนมทุกจานด้วยความตั้งใจ คัดสรรเมนูอร่อย มีคุณภาพ
             ปรุงด้วยวัตถุดิบชั้นดี อีกทั้งด้วยบรรยากาศของร้าน
             ที่อบอุ่นเป็นกันเอง ทุกคนจึงรู้สึกดีเหมือนได้นั่งทานขนมอร่อยๆ
@@ -73,7 +142,7 @@ function Home() {
         </div>
 
         <div className="sm:w-1/2 sm:pl-[80px] sm:pr-[100px]">
-          <h2 className="text-[48px] font-normal leading-[48px] text-black">
+          <h2 className="text-[48px] font-normal leading-[48px] text-black fontCopperplate">
             OUR STORY
           </h2>
           <p className="text-[20px] mt-5 font-normal leading-[30px] text-black">
@@ -94,7 +163,7 @@ function Home() {
       </div>
 
       <div className=" md:w-[1290px] mt-32 mx-auto">
-        <h2 className="text-center text-[48px] font-normal leading-[53px]">
+        <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
           SIGNATURE MENU
         </h2>
         <div className="mt-10 flex">
@@ -121,7 +190,7 @@ function Home() {
 
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -150,7 +219,7 @@ function Home() {
 
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -169,7 +238,7 @@ function Home() {
             </h3>
             <img
               src={COCONUTPIE1}
-              className="w-[215px] h-[170px] object-cover"
+              className="w-[251px] h-[210px] object-cover"
               alt=""
             />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
@@ -178,7 +247,7 @@ function Home() {
 
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -206,7 +275,7 @@ function Home() {
 
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -217,7 +286,7 @@ function Home() {
       <div className="bg-white">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-[1100px] lg:px-8">
           <div className="">
-            <h2 className="text-center text-[48px] font-normal leading-[53px]">
+            <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
               BEST SELLER
             </h2>
           </div>
@@ -248,7 +317,7 @@ function Home() {
           <div className="mt-24 text-sm text-center">
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               VIEW ALL MENU
             </a>
@@ -258,7 +327,7 @@ function Home() {
 
       <div className="bg-[#D5828B] py-[60px]">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-center text-[48px] font-normal text-white leading-[53px]">
+          <h2 className="text-center text-[48px] font-normal text-white leading-[53px] fontCopperplate">
             BEST SELLER
           </h2>
           <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] px-[150px]">
@@ -266,15 +335,27 @@ function Home() {
             their birthday even more special.
           </p>
           <div className="flex justify-between items-center mt-[60px]">
-              <img src={BirthdayCake1} className="w-[295px] h-[250px] object-cover" alt="" />
-              <img src={BirthdayCake2} className="w-[256px] h-[259px] object-cover"  alt="" />
-              <img src={BirthdayCake3} className="w-[300px] h-[304px] object-cover"  alt="" />
+            <img
+              src={BirthdayCake1}
+              className="w-[295px] h-[250px] object-cover"
+              alt=""
+            />
+            <img
+              src={BirthdayCake2}
+              className="w-[256px] h-[259px] object-cover"
+              alt=""
+            />
+            <img
+              src={BirthdayCake3}
+              className="w-[300px] h-[304px] object-cover"
+              alt=""
+            />
           </div>
-          
+
           <div className="mt-[50px] text-sm text-center">
             <a
               href="#"
-              class="inline-block text-xl font-normal px-7 py-4 text-[#D58288] bg-white text-uppercase rounded-[10px] transition duration-200"
+              className="inline-block text-xl font-normal px-7 py-4 text-[#D58288] bg-white text-uppercase rounded-[10px] transition duration-200"
             >
               ORDER NOW
             </a>
@@ -282,47 +363,132 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full flex h-[520px]">
-              <div className="w-1/2 bg-[#68825B]">
-              <div className="pt-[11%] pr-[0%] pb-[10%] pl-[20%]">
-      <div className=" elementor-widget-wrap elementor-element-populated p-4">
-        <div className="elementor-element elementor-element-30af089 elementor-widget elementor-widget-heading" data-id="30af089" data-element_type="widget" data-widget_type="heading.default">
-          <div className="elementor-widget-container">
-            <h2 className="text-[48px] font-normal text-white leading-[53px]">
-            Branch
-          </h2>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-5ef2c94 elementor-widget elementor-widget-text-editor mt-4" data-id="5ef2c94" data-element_type="widget" data-widget_type="text-editor.default">
-          <div className="elementor-widget-container">
-            <p className="text-white text-[24px] leading-[30px] font-medium">Laveena Taphanhin</p>
-            <p className="text-[16px] leading-[30px] font-medium text-white">08:00 – 17:30 Everyday</p>
-            <p className="text-[16px] leading-[30px] font-medium text-white">Tel : 062.826.4941</p>
-            <p className="text-[16px] leading-[30px] font-medium text-white">
-              <a href="https://goo.gl/maps/b6fkQUFZuMYkgPxGA" className="underline">GET DIRECTION</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className=" elementor-widget-wrap elementor-element-populated p-4">
-        <div className="elementor-element elementor-element-5ef2c94 elementor-widget elementor-widget-text-editor mt-4" data-id="5ef2c94" data-element_type="widget" data-widget_type="text-editor.default">
-          <div className="elementor-widget-container">
-            <p className="text-white text-[24px] leading-[30px] font-medium">Laveena Meung Pichit</p>
-            <p className="text-white text-[16px] leading-[30px] font-medium">08:00 – 17:30 Everyday</p>
-            <p className="text-[16px] leading-[30px] font-medium text-white">Tel : 062.826.4941</p>
-            <p className="text-[16px] leading-[30px] font-medium text-white">
-              <a href="https://goo.gl/maps/zEaqd9JVD7Mj3jAEA" className="underline">GET DIRECTION</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-              </div>
-              <div className="w-1/2 HomeMapSec">
 
+      <div className="relative px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+        <div className="absolute inset-0">
+          <div className="h-1/3 bg-white sm:h-2/3" />
+        </div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="text-center">
+            <h2 className="text-[48px] font-normal leading-[53px] fontCopperplate">
+              Blogs
+            </h2>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-lg gap-6 lg:max-w-[1120px] lg:grid-cols-3">
+            {posts.map((post) => (
+              <div
+                key={post.title}
+                className="flex flex-col overflow-hidden rounded-lg"
+              >
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-52 w-full object-cover rounded-t-[20px] rounded-tr-[20px]"
+                    src={post.imageUrl}
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-between bg-white pt-5">
+                  <div className="flex-1">
+                    
+                    <a href={post.href} className="mt-2 block">
+                      <p className="text-[28px] leading-[46px] font-bold text-[#3c0603]">
+                        {post.title}
+                      </p>
+                      <p className="text-[18px] leading-[23px] font-normal text-[#620d08] mt-2">
+                        <a href={post.href}>
+                          {post.date}
+                        </a>
+                      </p>
+                      <p className="mt-3 text-xl text-black">
+                        {post.description}
+                      </p>
+                    </a>
+                  </div>
+                  
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
       </div>
 
+      <div className="w-full flex">
+        <div className="w-1/2 bg-[#68825B]">
+          <div className="pt-[11%] pr-[0%] pb-[10%] pl-[20%]">
+            <div className=" elementor-widget-wrap elementor-element-populated p-4">
+              <div
+                className="elementor-element elementor-element-30af089 elementor-widget elementor-widget-heading"
+                data-id="30af089"
+                data-element_type="widget"
+                data-widget_type="heading.default"
+              >
+                <div className="elementor-widget-container">
+                  <h2 className="text-[48px] font-normal text-white leading-[53px] fontCopperplate">
+                    Branch
+                  </h2>
+                </div>
+              </div>
+              <div
+                className="elementor-element elementor-element-5ef2c94 elementor-widget elementor-widget-text-editor mt-4"
+                data-id="5ef2c94"
+                data-element_type="widget"
+                data-widget_type="text-editor.default"
+              >
+                <div className="elementor-widget-container">
+                  <p className="text-white text-[24px] leading-[30px] font-medium">
+                    Laveena Taphanhin
+                  </p>
+                  <p className="text-[16px] leading-[30px] font-medium text-white">
+                    08:00 – 17:30 Everyday
+                  </p>
+                  <p className="text-[16px] leading-[30px] font-medium text-white">
+                    Tel : 062.826.4941
+                  </p>
+                  <p className="text-[16px] leading-[30px] font-medium text-white">
+                    <a
+                      href="https://goo.gl/maps/b6fkQUFZuMYkgPxGA"
+                      className="underline"
+                    >
+                      GET DIRECTION
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className=" elementor-widget-wrap elementor-element-populated p-4">
+              <div
+                className="elementor-element elementor-element-5ef2c94 elementor-widget elementor-widget-text-editor mt-4"
+                data-id="5ef2c94"
+                data-element_type="widget"
+                data-widget_type="text-editor.default"
+              >
+                <div className="elementor-widget-container">
+                  <p className="text-white text-[24px] leading-[30px] font-medium">
+                    Laveena Meung Pichit
+                  </p>
+                  <p className="text-white text-[16px] leading-[30px] font-medium">
+                    08:00 – 17:30 Everyday
+                  </p>
+                  <p className="text-[16px] leading-[30px] font-medium text-white">
+                    Tel : 062.826.4941
+                  </p>
+                  <p className="text-[16px] leading-[30px] font-medium text-white">
+                    <a
+                      href="https://goo.gl/maps/zEaqd9JVD7Mj3jAEA"
+                      className="underline"
+                    >
+                      GET DIRECTION
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-1/2 HomeMapSec"></div>
+      </div>
+
+      
     </>
   );
 }

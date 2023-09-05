@@ -83,7 +83,7 @@ function FooterLaveena() {
         Footer
       </h2>
       <div className="footerBgImg footer-main">
-        <div className="mx-auto max-w-7xl pb-4 pt-16 sm:pt-24 lg:pt-22">
+        <div className="mx-auto max-w-7xl pb-16 pt-16 sm:pt-24 lg:pt-22">
           <div className="xl:flex xl:justify-around">
             <div className="w-[60%] space-y-8">
               <img className="w-56" src={LaveenaLogo} alt="help name" />
@@ -131,7 +131,7 @@ function FooterLaveena() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto max-w-7xl py-4 px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-2 md:order-2">
             <span className="text-base text-[#383838]">Follow Us:</span>
           {socialnavigation.map((item) => (
