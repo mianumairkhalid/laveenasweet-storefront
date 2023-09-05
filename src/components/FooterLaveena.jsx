@@ -78,22 +78,27 @@ function FooterLaveena() {
       },
   ];
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-white relative" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="footerBgImg footer-main">
+      
+      <div className="footerBgImg relative footer-main">
         <div className="mx-auto max-w-7xl pb-16 pt-16 sm:pt-24 lg:pt-22">
-          <div className="xl:flex xl:justify-around">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[#000000] opacity-50"
+        />
+          <div className="xl:flex relative xl:justify-around">
             <div className="w-[60%] space-y-8">
-              <img className="w-56" src={LaveenaLogo} alt="help name" />
-              <p className="text-[20px] leading-[33px] lg:pr-[150px] text-white">
+              <img className="w-56 relative" src={LaveenaLogo} alt="help name" />
+              <p className="text-[20px] leading-[33px] relative lg:pr-[150px] text-white">
                 Laveena ทางเลือกใหม่ของผู้นิยมเบเกอรี่ หวานน้อย จากการผลิตแบบ
                 homemade
               </p>
             </div>
             <div className="w-[20%] ">
-              <h3 className="text-[22px] font-semibold leading-6 text-white">
+              <h3 className="text-[22px] font-semibold relative leading-6 text-white">
                 Info
               </h3>
               <ul role="list" className="mt-6 space-y-2">
@@ -101,7 +106,7 @@ function FooterLaveena() {
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-[22px] leading-9 text-white hover:text-white"
+                      className="text-[22px] relative leading-9 text-white hover:text-white"
                     >
                       {item.name}
                     </a>
@@ -111,7 +116,7 @@ function FooterLaveena() {
             </div>
 
             <div className="w-[20%] ">
-              <h3 className="text-[22px] font-semibold leading-6 text-white">
+              <h3 className="text-[22px] relative font-semibold leading-6 text-white">
                 Help
               </h3>
               <ul role="list" className="mt-6 space-y-2">
@@ -119,7 +124,7 @@ function FooterLaveena() {
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="text-[22px] leading-9 text-white hover:text-white"
+                      className="text-[22px] relative leading-9 text-white hover:text-white"
                     >
                       {item.name}
                     </a>
@@ -145,7 +150,7 @@ function FooterLaveena() {
             </a>
           ))}
         </div>
-        <div className="mt-8 md:order-1 md:mt-0">
+        <div className="mt-8  md:order-1 md:mt-0">
           <p className="text-center text-base text-[#3c0603]">
             &copy; 2020 Your Company, Inc. All rights reserved.
           </p>
