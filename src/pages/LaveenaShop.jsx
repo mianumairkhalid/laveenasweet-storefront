@@ -1,7 +1,13 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { Fragment, useState } from "react";
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  FunnelIcon,
+  MinusIcon,
+  PlusIcon,
+  Squares2X2Icon,
+} from "@heroicons/react/20/solid";
 import BelgiumChocolateCake from "../img/BelgiumFlouelessChocolateCake.png";
 import COCONUTPIE1 from "../img/COCONUT-PIE-1.png";
 import SanKaYa1 from "../img/San-Ka-Ya_1.png";
@@ -10,9 +16,6 @@ import ChocolateMousseCake from "../img/ChocolateMousseCake.jpg";
 import ORIGINALMILO from "../img/ORIGINALMILO.png";
 
 function LaveenaShop() {
-
-
-
   const products = [
     {
       id: 1,
@@ -48,31 +51,26 @@ function LaveenaShop() {
     },
   ];
 
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const sortOptions = [
+    { name: "Most Popular", href: "#", current: true },
+    { name: "Best Rating", href: "#", current: false },
+    { name: "Newest", href: "#", current: false },
+    { name: "Price: Low to High", href: "#", current: false },
+    { name: "Price: High to Low", href: "#", current: false },
+  ];
+  const subCategories = [
+    { name: "Totes", href: "#" },
+    { name: "Backpacks", href: "#" },
+    { name: "Travel Bags", href: "#" },
+    { name: "Hip Bags", href: "#" },
+    { name: "Laptop Sleeves", href: "#" },
+  ];
 
-const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
-  { name: 'Price: Low to High', href: '#', current: false },
-  { name: 'Price: High to Low', href: '#', current: false },
-]
-const subCategories = [
-  { name: 'Totes', href: '#' },
-  { name: 'Backpacks', href: '#' },
-  { name: 'Travel Bags', href: '#' },
-  { name: 'Hip Bags', href: '#' },
-  { name: 'Laptop Sleeves', href: '#' },
-]
-
-
-
-
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
   return (
     <>
       <div className="bg-white">
@@ -136,8 +134,6 @@ function classNames(...classes) {
                           </li>
                         ))}
                       </ul>
-
-                     
                     </form>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -145,10 +141,8 @@ function classNames(...classes) {
             </Dialog>
           </Transition.Root>
 
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-              
-
+          <main className="mx-auto max-w-7xl px-4  ">
+            <div className="flex items-baseline justify-between pt-24 pb-6">
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
@@ -224,7 +218,7 @@ function classNames(...classes) {
                   <h3 className="sr-only">Categories</h3>
                   <ul
                     role="list"
-                    className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
+                    className="space-y-3 border-b border-gray-200 pb-6 text-base font-medium text-[#8A8989]"
                   >
                     {subCategories.map((category) => (
                       <li key={category.name}>
@@ -232,35 +226,35 @@ function classNames(...classes) {
                       </li>
                     ))}
                   </ul>
-
                 </form>
 
                 {/* Product gridd */}
                 <div className="lg:col-span-3">
                   {/* Replace with your content */}
-                  <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
-            {products.map((product) => (
-              <div key={product.id} className="group relative">
-                <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
-                  <img
-                    src={product.imageSrc}
-                    className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
-                  />
-                </div>
-                <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
-                  <a href={product.href}>
-                    <span className="absolute inset-0" />
-                    {product.name}
-                  </a>
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
-                <p className="mt-2 text-base font-medium text-[#d5828b]">
-                  {product.price}
-                </p>
-              </div>
-            ))}
-          </div>
-
+                  <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4">
+                    {products.map((product) => (
+                      <div key={product.id} className="group relative">
+                        <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
+                          <img
+                            src={product.imageSrc}
+                            className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
+                          />
+                        </div>
+                        <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
+                          <a href={product.href}>
+                            <span className="absolute inset-0" />
+                            {product.name}
+                          </a>
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {product.color}
+                        </p>
+                        <p className="mt-2 text-base font-medium text-[#d5828b]">
+                          {product.price}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* /End replace */}
                 </div>
