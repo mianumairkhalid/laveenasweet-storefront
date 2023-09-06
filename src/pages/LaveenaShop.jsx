@@ -1,67 +1,69 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { Fragment, useState } from "react";
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  FunnelIcon,
+  MinusIcon,
+  PlusIcon,
+  Squares2X2Icon,
+} from "@heroicons/react/20/solid";
+import BelgiumChocolateCake from "../img/BelgiumFlouelessChocolateCake.png";
+import COCONUTPIE1 from "../img/COCONUT-PIE-1.png";
+import SanKaYa1 from "../img/San-Ka-Ya_1.png";
+import PuddingChocolateCake from "../img/PuddingChocolateCake.jpg";
+import ChocolateMousseCake from "../img/ChocolateMousseCake.jpg";
+import ORIGINALMILO from "../img/ORIGINALMILO.png";
 
 function LaveenaShop() {
+  const products = [
+    {
+      name: "Belgium Flourless Chocolate Cake",
+      price: "149.00",
+      href: "#",
+      imageSrc: BelgiumChocolateCake,
+    },
+    {
+      name: "Pudding Chocolate Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: PuddingChocolateCake,
+    },
+    {
+      name: "Chocolate Mousse Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: ChocolateMousseCake,
+    },
+    {
+      name: "ORIGINAL MILO",
+      price: "500.00",
+      href: "#",
+      imageSrc: ORIGINALMILO,
+    },
+    
+  ];
 
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false },
-  { name: 'Price: Low to High', href: '#', current: false },
-  { name: 'Price: High to Low', href: '#', current: false },
-]
-const subCategories = [
-  { name: 'Totes', href: '#' },
-  { name: 'Backpacks', href: '#' },
-  { name: 'Travel Bags', href: '#' },
-  { name: 'Hip Bags', href: '#' },
-  { name: 'Laptop Sleeves', href: '#' },
-]
-const filters = [
-  {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'white', label: 'White', checked: false },
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blue', label: 'Blue', checked: true },
-      { value: 'brown', label: 'Brown', checked: false },
-      { value: 'green', label: 'Green', checked: false },
-      { value: 'purple', label: 'Purple', checked: false },
-    ],
-  },
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'new-arrivals', label: 'New Arrivals', checked: false },
-      { value: 'sale', label: 'Sale', checked: false },
-      { value: 'travel', label: 'Travel', checked: true },
-      { value: 'organization', label: 'Organization', checked: false },
-      { value: 'accessories', label: 'Accessories', checked: false },
-    ],
-  },
-  {
-    id: 'size',
-    name: 'Size',
-    options: [
-      { value: '2l', label: '2L', checked: false },
-      { value: '6l', label: '6L', checked: false },
-      { value: '12l', label: '12L', checked: false },
-      { value: '18l', label: '18L', checked: false },
-      { value: '20l', label: '20L', checked: false },
-      { value: '40l', label: '40L', checked: true },
-    ],
-  },
-]
+  const sortOptions = [
+    { name: "Most Popular", href: "#", current: true },
+    { name: "Best Rating", href: "#", current: false },
+    { name: "Newest", href: "#", current: false },
+    { name: "Price: Low to High", href: "#", current: false },
+    { name: "Price: High to Low", href: "#", current: false },
+  ];
+  const subCategories = [
+    { name: "Totes", href: "#" },
+    { name: "Backpacks", href: "#" },
+    { name: "Travel Bags", href: "#" },
+    { name: "Hip Bags", href: "#" },
+    { name: "Laptop Sleeves", href: "#" },
+  ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
   return (
     <>
       <div className="bg-white">
@@ -125,8 +127,6 @@ function classNames(...classes) {
                           </li>
                         ))}
                       </ul>
-
-                     
                     </form>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -134,10 +134,34 @@ function classNames(...classes) {
             </Dialog>
           </Transition.Root>
 
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-              
+          <main className="mx-auto max-w-7xl px-4  ">
+            
 
+            <section aria-labelledby="products-heading" className="pt-6 pb-24">
+              <h2 id="products-heading" className="sr-only">
+                Products
+              </h2>
+
+              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                {/* Filters */}
+                <form className="hidden lg:block">
+                  <h3 className="sr-only">Categories</h3>
+                  <ul
+                    role="list"
+                    className="space-y-3 border-b border-gray-200 pb-6 text-base font-medium text-[#8A8989]"
+                  >
+                    {subCategories.map((category) => (
+                      <li key={category.name}>
+                        <a href={category.href}>{category.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </form>
+
+                {/* Product gridd */}
+                <div className="lg:col-span-3">
+                  {/* Replace with your content */}
+                  <div className="flex items-baseline justify-between">
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
@@ -184,13 +208,7 @@ function classNames(...classes) {
                   </Transition>
                 </Menu>
 
-                <button
-                  type="button"
-                  className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
-                >
-                  <span className="sr-only">View grid</span>
-                  <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-                </button>
+                
                 <button
                   type="button"
                   className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
@@ -201,33 +219,31 @@ function classNames(...classes) {
                 </button>
               </div>
             </div>
-
-            <section aria-labelledby="products-heading" className="pt-6 pb-24">
-              <h2 id="products-heading" className="sr-only">
-                Products
-              </h2>
-
-              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-                {/* Filters */}
-                <form className="hidden lg:block">
-                  <h3 className="sr-only">Categories</h3>
-                  <ul
-                    role="list"
-                    className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
-                  >
-                    {subCategories.map((category) => (
-                      <li key={category.name}>
-                        <a href={category.href}>{category.name}</a>
-                      </li>
+                  <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4">
+                    {products.map((product) => (
+                      <div key={product.id} className="group relative">
+                        <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
+                          <img
+                            src={product.imageSrc}
+                            className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
+                          />
+                        </div>
+                        <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
+                          <a href={product.href}>
+                            <span className="absolute inset-0" />
+                            {product.name}
+                          </a>
+                        </h3>
+                        <p className="mt-1 text-sm text-gray-500">
+                          {product.color}
+                        </p>
+                        <p className="mt-2 text-base font-medium text-[#d5828b]">
+                          {product.price}
+                        </p>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
 
-                </form>
-
-                {/* Product grid */}
-                <div className="lg:col-span-3">
-                  {/* Replace with your content */}
-                  <div className="h-96 rounded-lg border-4 border-dashed border-gray-200 lg:h-full" />
                   {/* /End replace */}
                 </div>
               </div>
