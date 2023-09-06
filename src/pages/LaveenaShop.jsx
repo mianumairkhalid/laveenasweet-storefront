@@ -235,7 +235,7 @@ function classNames(...classes) {
 
                 </form>
 
-                {/* Product grid */}
+                {/* Product gridd */}
                 <div className="lg:col-span-3">
                   {/* Replace with your content */}
                   <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
