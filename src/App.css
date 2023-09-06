@@ -396,6 +396,16 @@ body {
   padding-bottom: 100px;
 }
 
+li.meta-categories:after {
+  content: "/";
+  --vertical-align: baseline;
+  padding:0px 10px;
+}
+
+
+.blog-content p {
+  margin-bottom: 1.5em;
+}
 
 @keyframes loadingAnim{
   from{transform:rotate(0deg)}
