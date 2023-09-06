@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { Link } from 'react-router-dom';
 import LaveenaLogo from "../img/Laveena-Logo.png";
 import { Popover, Transition } from '@headlessui/react'
 import circleProfile from '../img/circle-profile.png'
@@ -138,18 +139,18 @@ export default function Example() {
             )}
           </Popover>
 
-          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
+          <Link  to='/product' className="text-black text-[22px] hover:font-bold hover:white">
           Product
-          </a>
-          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
+          </Link >
+          <Link  to='/blog' className="text-black text-[22px] hover:font-bold hover:white">
           Blog
-          </a>
-          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
+          </Link >
+          <Link  to='/laveena-about-us' className="text-black text-[22px] hover:font-bold hover:white">
           About Us
-          </a>
-          <a href="#" className="text-black text-[22px] hover:font-bold hover:white">
+          </Link >
+          <Link  to='/branch' className="text-black text-[22px] hover:font-bold hover:white">
           Contact Us
-          </a>
+          </Link >
         </Popover.Group>
         <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
           <img className='w-[80px] mr-4' src={circleProfile} alt="" />
