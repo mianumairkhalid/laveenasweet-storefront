@@ -38,12 +38,12 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="sm:flex my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
+      <div className="sm:flex my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
         <div className="lg:w-1/2">
           <img className="rounded-2xl" src={bannerTop1} alt="" />
         </div>
         <div className="lg:w-1/2 sm:pl-[120px] sm:pr-[20px]">
-          <h2 className="lg:text-[48px] sm:text-[32px] font-normal leading-[48px] text-black fontCopperplate">
+          <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px] font-normal leading-[48px] text-black fontCopperplate">
             A Perfect Delicious From Taphanhin
           </h2>
           <p
@@ -61,9 +61,9 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="sm:flex lg:flex-row flex-col-reverse my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
-        <div className="lg:w-1/2 sm:pl-[80px] sm:pr-[100px]">
-          <h2 className="lg:text-[48px] sm:text-[32px] font-normal leading-[48px] text-black fontCopperplate">
+      <div className="flex lg:flex-row flex-col-reverse my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7 px-[20px]">
+        <div className="lg:w-1/2 sm:pl-[50px] sm:pr-[100px]">
+          <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px]   font-normal leading-[48px] text-black fontCopperplate">
             OUR STORY
           </h2>
           <p className="text-[20px] mt-5 font-normal leading-[30px] text-black">
@@ -78,7 +78,7 @@ function AboutUs() {
             ติดต่อและสั่งซื้อ
           </button>
         </div>
-        <div className="">
+        <div className="lg:w-1/2">
           <img className="rounded-2xl" src={bannerTop2} alt="" />
         </div>
       </div>
@@ -226,7 +226,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="mx-[40px]">
+      <div className="mx-[40px] sm:hidden block">
         <h2 class="text-[32px] text-center">Our story</h2>
         <p className="mt-5 text-center">
           ยูวีละตินแหม็บกิมจิ ออสซี่อยุติธรรมสไตรค์เกมส์
@@ -278,13 +278,30 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="bg-[#D5828B] text-white text-center text-[34px] leading-[52px] py-[80px] md:mt-[180px]">
+      <div className="bg-[#D5828B] text-white hidden lg:block text-center text-[34px] leading-[52px] py-[80px] md:mt-[180px]">
         <div className="elementor-widget-container">
           ขนมทุกชิ้นที่เราปรุงจะส่งต่อ
           <span className="font-bold text-[44px] mx-2">ความสุข</span>
           ให้ทุกคนให้เหมือนกับที่
           <br />
           <span className="font-bold text-[44px]">คนในครอบครัว</span>
+          เราได้รับ
+          <h2
+            class="text-[30px] leading-[32px] italic mt-2"
+            style={{ fontFamily: "serif" }}
+          >
+            Laveena’s TheBaking Room
+          </h2>
+        </div>
+      </div>
+
+
+      <div className="bg-[#D5828B] text-white text-center block lg:hidden text-[30px] leading-[46px] px-[30px] py-[80px] lg:mt-[180px] mt-[100px]">
+        <div className="elementor-widget-container">
+        ขนมทุกชิ้นที่เราปรุงจะส่งต่อ
+          <span className="font-bold text-[32px] mx-2">ความสุข</span>
+          ให้ทุกคนให้เหมือนกับที่ 
+          <span className="font-bold text-[32px]">คนในครอบครัว</span>
           เราได้รับ
           <h2
             class="text-[30px] leading-[32px] italic mt-2"
