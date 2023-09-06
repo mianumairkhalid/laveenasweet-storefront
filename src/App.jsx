@@ -53,6 +53,11 @@ import HowRedeemReward from "./pages/HowRedeemReward";
 import MemberConditions from "./pages/MemberConditions";
 import SingleBlog from "./pages/SingleBlog";
 
+import FooterLaveena from "./components/FooterLaveena";
+import HeaderLaveena from "./components/HeaderLaveena";
+import Blog from "./pages/Blog";
+import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const navigate = useNavigate();
@@ -90,9 +95,9 @@ function App() {
     }
 
 
-    if (!getToken()) {
-      navigate("/login");
-    }
+    // if (!getToken()) {
+    //   navigate("/login");
+    // }
 
 
   },[isPhoneVerified]);
@@ -106,6 +111,7 @@ function App() {
         token: getToken,
       }}
     >
+      <HeaderLaveena />
       <UserProvider>
         <ProductsProvider>
           <CartProvider>
@@ -177,11 +183,18 @@ function App() {
               <Route path="/blog-admin" element={<BlogAdmin />} />
               <Route path="/blog-categories" element={<BlogCategories />} />
               <Route path="/blog-add" element={<BlogAdd />} />
+
+
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/branch" element={<ContactUs />} />
+              <Route path="/laveena-about-us" element={<AboutUs />} />
+
             </Routes>
             <Cart />
           </CartProvider>
         </ProductsProvider>
       </UserProvider>
+      <FooterLaveena />
     </FrappeProvider>
   )
 }
