@@ -54,11 +54,14 @@ function LaveenaShop() {
     { name: "Price: High to Low", href: "#", current: false },
   ];
   const subCategories = [
-    { name: "Totes", href: "#" },
-    { name: "Backpacks", href: "#" },
-    { name: "Travel Bags", href: "#" },
-    { name: "Hip Bags", href: "#" },
-    { name: "Laptop Sleeves", href: "#" },
+    { name: "Birthday Cake", href: "#" },
+    { name: "Cake", href: "#" },
+    { name: "Catering", href: "#" },
+    { name: "Cheesecake", href: "#" },
+    { name: "Cookie", href: "#" },
+    { name: "Pastry", href: "#" },
+    { name: "Sauce", href: "#" },
+    { name: "Waffle", href: "#" },
   ];
 
   function classNames(...classes) {
