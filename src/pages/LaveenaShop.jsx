@@ -2,8 +2,52 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import BelgiumChocolateCake from "../img/BelgiumFlouelessChocolateCake.png";
+import COCONUTPIE1 from "../img/COCONUT-PIE-1.png";
+import SanKaYa1 from "../img/San-Ka-Ya_1.png";
+import PuddingChocolateCake from "../img/PuddingChocolateCake.jpg";
+import ChocolateMousseCake from "../img/ChocolateMousseCake.jpg";
+import ORIGINALMILO from "../img/ORIGINALMILO.png";
 
 function LaveenaShop() {
+
+
+
+  const products = [
+    {
+      id: 1,
+      name: "Belgium Flourless Chocolate Cake",
+      price: "149.00",
+      href: "#",
+      imageSrc: BelgiumChocolateCake,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+    {
+      id: 1,
+      name: "Pudding Chocolate Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: PuddingChocolateCake,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+    {
+      id: 1,
+      name: "Chocolate Mousse Cake",
+      price: "500.00",
+      href: "#",
+      imageSrc: ChocolateMousseCake,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+    {
+      id: 1,
+      name: "ORIGINAL MILO",
+      price: "500.00",
+      href: "#",
+      imageSrc: ORIGINALMILO,
+      imageAlt: "Hand stitched, orange leather long wallet.",
+    },
+  ];
+
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -21,43 +65,10 @@ const subCategories = [
   { name: 'Hip Bags', href: '#' },
   { name: 'Laptop Sleeves', href: '#' },
 ]
-const filters = [
-  {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'white', label: 'White', checked: false },
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blue', label: 'Blue', checked: true },
-      { value: 'brown', label: 'Brown', checked: false },
-      { value: 'green', label: 'Green', checked: false },
-      { value: 'purple', label: 'Purple', checked: false },
-    ],
-  },
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'new-arrivals', label: 'New Arrivals', checked: false },
-      { value: 'sale', label: 'Sale', checked: false },
-      { value: 'travel', label: 'Travel', checked: true },
-      { value: 'organization', label: 'Organization', checked: false },
-      { value: 'accessories', label: 'Accessories', checked: false },
-    ],
-  },
-  {
-    id: 'size',
-    name: 'Size',
-    options: [
-      { value: '2l', label: '2L', checked: false },
-      { value: '6l', label: '6L', checked: false },
-      { value: '12l', label: '12L', checked: false },
-      { value: '18l', label: '18L', checked: false },
-      { value: '20l', label: '20L', checked: false },
-      { value: '40l', label: '40L', checked: true },
-    ],
-  },
-]
+
+
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -227,7 +238,30 @@ function classNames(...classes) {
                 {/* Product grid */}
                 <div className="lg:col-span-3">
                   {/* Replace with your content */}
-                  <div className="h-96 rounded-lg border-4 border-dashed border-gray-200 lg:h-full" />
+                  <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
+            {products.map((product) => (
+              <div key={product.id} className="group relative">
+                <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
+                  <img
+                    src={product.imageSrc}
+                    className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
+                  />
+                </div>
+                <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
+                  <a href={product.href}>
+                    <span className="absolute inset-0" />
+                    {product.name}
+                  </a>
+                </h3>
+                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                <p className="mt-2 text-base font-medium text-[#d5828b]">
+                  {product.price}
+                </p>
+              </div>
+            ))}
+          </div>
+
+
                   {/* /End replace */}
                 </div>
               </div>
