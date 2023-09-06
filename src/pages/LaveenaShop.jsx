@@ -18,37 +18,30 @@ import ORIGINALMILO from "../img/ORIGINALMILO.png";
 function LaveenaShop() {
   const products = [
     {
-      id: 1,
       name: "Belgium Flourless Chocolate Cake",
       price: "149.00",
       href: "#",
       imageSrc: BelgiumChocolateCake,
-      imageAlt: "Hand stitched, orange leather long wallet.",
     },
     {
-      id: 1,
       name: "Pudding Chocolate Cake",
       price: "500.00",
       href: "#",
       imageSrc: PuddingChocolateCake,
-      imageAlt: "Hand stitched, orange leather long wallet.",
     },
     {
-      id: 1,
       name: "Chocolate Mousse Cake",
       price: "500.00",
       href: "#",
       imageSrc: ChocolateMousseCake,
-      imageAlt: "Hand stitched, orange leather long wallet.",
     },
     {
-      id: 1,
       name: "ORIGINAL MILO",
       price: "500.00",
       href: "#",
       imageSrc: ORIGINALMILO,
-      imageAlt: "Hand stitched, orange leather long wallet.",
     },
+    
   ];
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -142,7 +135,33 @@ function LaveenaShop() {
           </Transition.Root>
 
           <main className="mx-auto max-w-7xl px-4  ">
-            <div className="flex items-baseline justify-between pt-24 pb-6">
+            
+
+            <section aria-labelledby="products-heading" className="pt-6 pb-24">
+              <h2 id="products-heading" className="sr-only">
+                Products
+              </h2>
+
+              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                {/* Filters */}
+                <form className="hidden lg:block">
+                  <h3 className="sr-only">Categories</h3>
+                  <ul
+                    role="list"
+                    className="space-y-3 border-b border-gray-200 pb-6 text-base font-medium text-[#8A8989]"
+                  >
+                    {subCategories.map((category) => (
+                      <li key={category.name}>
+                        <a href={category.href}>{category.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </form>
+
+                {/* Product gridd */}
+                <div className="lg:col-span-3">
+                  {/* Replace with your content */}
+                  <div className="flex items-baseline justify-between">
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
@@ -189,13 +208,7 @@ function LaveenaShop() {
                   </Transition>
                 </Menu>
 
-                <button
-                  type="button"
-                  className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
-                >
-                  <span className="sr-only">View grid</span>
-                  <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-                </button>
+                
                 <button
                   type="button"
                   className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
@@ -206,31 +219,6 @@ function LaveenaShop() {
                 </button>
               </div>
             </div>
-
-            <section aria-labelledby="products-heading" className="pt-6 pb-24">
-              <h2 id="products-heading" className="sr-only">
-                Products
-              </h2>
-
-              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-                {/* Filters */}
-                <form className="hidden lg:block">
-                  <h3 className="sr-only">Categories</h3>
-                  <ul
-                    role="list"
-                    className="space-y-3 border-b border-gray-200 pb-6 text-base font-medium text-[#8A8989]"
-                  >
-                    {subCategories.map((category) => (
-                      <li key={category.name}>
-                        <a href={category.href}>{category.name}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </form>
-
-                {/* Product gridd */}
-                <div className="lg:col-span-3">
-                  {/* Replace with your content */}
                   <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4">
                     {products.map((product) => (
                       <div key={product.id} className="group relative">
