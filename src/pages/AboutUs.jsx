@@ -295,12 +295,11 @@ function AboutUs() {
         </div>
       </div>
 
-
       <div className="bg-[#D5828B] text-white text-center block lg:hidden text-[30px] leading-[46px] px-[30px] py-[80px] lg:mt-[180px] mt-[100px]">
         <div className="elementor-widget-container">
-        ขนมทุกชิ้นที่เราปรุงจะส่งต่อ
+          ขนมทุกชิ้นที่เราปรุงจะส่งต่อ
           <span className="font-bold text-[32px] mx-2">ความสุข</span>
-          ให้ทุกคนให้เหมือนกับที่ 
+          ให้ทุกคนให้เหมือนกับที่
           <span className="font-bold text-[32px]">คนในครอบครัว</span>
           เราได้รับ
           <h2

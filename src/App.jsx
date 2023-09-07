@@ -60,6 +60,7 @@ import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import BlogDetail from "./pages/BlogDetail";
 import LaveenaShop from "./pages/LaveenaShop";
+import ProductDetailPage from "./pages/ProductDetailPage";
 
 function App() {
   const navigate = useNavigate();
@@ -155,6 +156,7 @@ function App() {
               <Route path="/how-to-collect-rewards" element={<HowRedeemReward />} />
               <Route path="/member-conditions" element={<MemberConditions />} />
               <Route path="/single-blog" element={<SingleBlog />} />
+              <Route path="/product-detail" element={<ProductDetailPage />} />
 
 
               <Route path="/blog-admin" element={<BlogAdmin />} />
