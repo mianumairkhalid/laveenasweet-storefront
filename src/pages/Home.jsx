@@ -119,14 +119,57 @@ function Home() {
     <Slider />
     </div>
 
-
-
-      <div className="sm:flex my-20 justify-center md:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
-        <div className="sm:w-1/2">
+    <div className="sm:flex my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
+        <div className="lg:w-1/2">
           <img className="rounded-2xl" src={bannerTop1} alt="" />
         </div>
-        <div className="sm:w-1/2 sm:pl-[120px] sm:pr-[20px]">
-          <h2 className="text-[48px] font-normal leading-[48px] text-black fontCopperplate">
+        <div className="lg:w-1/2 sm:pl-[120px] sm:pr-[20px]">
+          <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px] font-normal leading-[48px] text-black fontCopperplate">
+            A Perfect Delicious From Taphanhin
+          </h2>
+          <p
+            className="text-[20px] mt-5 font-normal leading-[30px] text-black"
+            style={{ fontFamily: "Noto Sans Thai" }}
+          >
+            ร้าน “Laveena” ปรุงขนมทุกจานด้วยความตั้งใจ คัดสรรเมนูอร่อย มีคุณภาพ
+            ปรุงด้วยวัตถุดิบชั้นดี อีกทั้งด้วยบรรยากาศของร้าน
+            ที่อบอุ่นเป็นกันเอง ทุกคนจึงรู้สึกดีเหมือน ได้นั่งทานขนมอร่อยๆ
+            ในเวลาพักผ่อนได้อย่างสบายใจ
+          </p>
+          <button className="bg-[#D5828B] text-[20px] font-normal leading-[14px] text-white rounded-lg py-5 px-7 mt-7">
+            ติดต่อและสั่งซื้อ
+          </button>
+        </div>
+      </div>
+
+      <div className="flex lg:flex-row flex-col-reverse my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7 px-[20px]">
+        <div className="lg:w-1/2 sm:pl-[50px] sm:pr-[100px]">
+          <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px]   font-normal leading-[48px] text-black fontCopperplate">
+            OUR STORY
+          </h2>
+          <p className="text-[20px] mt-5 font-normal leading-[30px] text-black">
+            “Finest American Baking” เป็นคำจำกัดความของ Laveena
+            ที่หมายถึงการที่เราเสิร์ฟเมนูที่ได้เรียนมาจากตำรับอเมริกันโดยแท้
+            ทุกเมนูล้วนเป็นกรรมวิธีการปรุงแบบอเมริกัน แต่พัฒนา
+            ปรับปรุงรสชาติให้ออกมาแบบสไตล์ไทย ในแบบที่ทุกคนคุ้นเคย ไม่ว่าจะเป็น
+            เค้ก พาย ขนมปัง และเมนูนางเอกของเรา อเมริกันวาฟเฟิ่ล ที่ Marlene
+            ตั้งใจสอนและบันทึกลงบนแผ่นกระดาษด้วยลายมือให้เรากลับมาเป็นของฝากให้กับทุกคนที่บ้าน
+          </p>
+          <button className="bg-[#D5828B] text-[20px] font-normal leading-[14px] text-white rounded-lg py-5 px-7 mt-7">
+            ติดต่อและสั่งซื้อ
+          </button>
+        </div>
+        <div className="lg:w-1/2">
+          <img className="rounded-2xl" src={bannerTop2} alt="" />
+        </div>
+      </div>
+
+      {/* <div className="lg:flex my-20 justify-center md:w-[1290px] mx-auto items-center flex-wrap gap-y-7">
+        <div className="md:w-1/2">
+          <img className="rounded-2xl" src={bannerTop1} alt="" />
+        </div>
+        <div className="lg:w-1/2 lg:pl-[120px] lg:pr-[20px] px-2">
+          <h2 className="text-[48px] font-normal lg:mt-0 mt-5 leading-[48px] text-black fontCopperplate">
             FINEST AMERICAN BAKING
           </h2>
           <p
@@ -143,7 +186,7 @@ function Home() {
           </button>
         </div>
 
-        <div className="sm:w-1/2 sm:pl-[80px] sm:pr-[100px]">
+        <div className="sm:w-1/2 sm:pl-[80px] sm:pr-[100px] sm:mt-0 mt-10 px-2">
           <h2 className="text-[48px] font-normal leading-[48px] text-black fontCopperplate">
             OUR STORY
           </h2>
@@ -159,19 +202,19 @@ function Home() {
             ติดต่อและสั่งซื้อ
           </button>
         </div>
-        <div className="sm:w-1/2">
+        <div className="sm:w-1/2 sm:mt-0 mt-5">
           <img className="rounded-2xl" src={bannerTop2} alt="" />
         </div>
-      </div>
+      </div> */}
 
-      <div className=" md:w-[1290px] mt-32 mx-auto">
+      <div className="lg:w-[1290px] mt-32 mx-auto">
         <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
           SIGNATURE MENU
         </h2>
-        <div className="mt-10 flex">
-          <div className="bg-[#E7EBDE] lg:w-1/4 text-center px-8">
+        <div className="mt-10 md:flex md:flex-wrap">
+          <div className="bg-[#E7EBDE] md:w-1/2  lg:w-1/4 text-center px-8 py-14">
             <img
-              className="w-[34px] h-[34px] mx-auto mt-14"
+              className="w-[34px] h-[34px] mx-auto"
               src={unitedStates1}
               alt=""
             />
@@ -183,7 +226,7 @@ function Home() {
             </h3>
             <img
               src={AmericanWaffle}
-              className="w-[251px] h-[210px] object-cover"
+              className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
@@ -198,9 +241,9 @@ function Home() {
             </a>
           </div>
 
-          <div className="bg-[#FDFAF6] pb-16 lg:w-1/4 text-center px-8">
+          <div className="bg-[#FDFAF6] pb-16 md:w-1/2 py-14  lg:w-1/4 text-center px-8">
             <img
-              className="w-[34px] h-[34px] mx-auto mt-14"
+              className="w-[34px] h-[34px] mx-auto"
               src={unitedStates2}
               alt=""
             />
@@ -212,7 +255,7 @@ function Home() {
             </h3>
             <img
               src={BelgiumChocolateCake}
-              className="w-[251px] h-[210px] object-cover"
+              className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
@@ -226,9 +269,9 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#E7EBDE] lg:w-1/4 text-center px-8">
+          <div className="bg-[#E7EBDE] md:w-1/2 py-14  lg:w-1/4 text-center px-8">
             <img
-              className="w-[34px] h-[34px] mx-auto mt-14"
+              className="w-[34px] h-[34px] mx-auto"
               src={unitedStates3}
               alt=""
             />
@@ -240,7 +283,7 @@ function Home() {
             </h3>
             <img
               src={COCONUTPIE1}
-              className="w-[251px] h-[210px] object-cover"
+              className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
@@ -254,9 +297,9 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#FDFAF6] lg:w-1/4 text-center px-8">
+          <div className="bg-[#FDFAF6] md:w-1/2 py-14  lg:w-1/4 text-center px-8">
             <img
-              className="w-[34px] h-[34px] mx-auto mt-14"
+              className="w-[34px] h-[34px] mx-auto"
               src={unitedStates4}
               alt=""
             />
@@ -268,7 +311,7 @@ function Home() {
             </h3>
             <img
               src={SanKaYa1}
-              className="w-[251px] h-[210px] object-cover"
+              className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
@@ -293,9 +336,9 @@ function Home() {
             </h2>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-4 lg:mt-16">
+          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 lg:mt-16">
             {products.map((product) => (
-              <div key={product.id} className="group relative">
+              <div key={product.id} className="group relative sm:w-auto w-[250px] mx-auto">
                 <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
                   <img
                     src={product.imageSrc}
@@ -332,24 +375,24 @@ function Home() {
           <h2 className="text-center text-[48px] font-normal text-white leading-[53px] fontCopperplate">
             BEST SELLER
           </h2>
-          <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] px-[150px]">
+          <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] md:px-[150px]">
             Birthday Fresh cream cake from Laveena Cake Box is sure to make
             their birthday even more special.
           </p>
-          <div className="flex justify-between items-center mt-[60px]">
+          <div className="sm:flex justify-between items-center mt-[60px]">
             <img
               src={BirthdayCake1}
-              className="w-[295px] h-[250px] object-cover"
+              className="w-[270px] h-[auto] mx-auto object-cover"
               alt=""
             />
             <img
               src={BirthdayCake2}
-              className="w-[256px] h-[259px] object-cover"
+              className="w-[270px] h-[auto] mx-auto object-cover"
               alt=""
             />
             <img
               src={BirthdayCake3}
-              className="w-[300px] h-[304px] object-cover"
+              className="w-[270px] h-[auto] mx-auto object-cover"
               alt=""
             />
           </div>
@@ -376,7 +419,7 @@ function Home() {
               Blogs
             </h2>
           </div>
-          <div className="mx-auto mt-12 grid max-w-lg gap-6 lg:max-w-[1120px] lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid gap-6 md:grid-cols-2 lg:max-w-[1120px] lg:grid-cols-3">
             {posts.map((post) => (
               <div
                 key={post.title}
@@ -414,8 +457,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full flex">
-        <div className="w-1/2 bg-[#68825B]">
+      <div className="w-full sm:flex">
+        <div className="sm:w-1/2 bg-[#68825B]">
           <div className="pt-[11%] pr-[0%] pb-[10%] pl-[20%]">
             <div className=" elementor-widget-wrap elementor-element-populated p-4">
               <div
@@ -487,7 +530,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="w-1/2 HomeMapSec"></div>
+        <div className="sm:w-1/2 HomeMapSec"></div>
       </div>
 
       

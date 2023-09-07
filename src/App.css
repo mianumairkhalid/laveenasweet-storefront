@@ -407,6 +407,28 @@ li.meta-categories:after {
   margin-bottom: 1.5em;
 }
 
+/* Webkit (Safari, Chrome, and newer versions of Edge) */
+.rangeInput::-webkit-slider-thumb {
+  background: #D5828B; /* Your desired thumb color */
+}
+
+/* Mozilla Firefox */
+.rangeInput::-moz-range-thumb {
+  background: #D5828B; /* Your desired thumb color */
+}
+
+/* Microsoft Edge (Internet Explorer) */
+.rangeInput::-ms-thumb {
+  background: #D5828B; /* Your desired thumb color */
+}
+
+/* Standard */
+.rangeInput {
+  -webkit-appearance: none; /* Disable default styling */
+  background: #D5828B; /* Fallback for older browsers */
+}
+
+
 @keyframes loadingAnim{
   from{transform:rotate(0deg)}
   to{transform:rotate(360deg)}

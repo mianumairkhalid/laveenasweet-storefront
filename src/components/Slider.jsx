@@ -58,9 +58,9 @@ const Slider = () => {
               alt={`Image ${index + 1}`}
               className="w-[100vw] h-[850px] object-cover"
             />
-            <div className="absolute top-[20%] pl-[8%]">
-              <img src={image.logo} />
-              <p className="w-[575px] mt-[30px]">{image.text}</p>
+            <div className="absolute top-[20%] pl-[8%] sm:w-full">
+              <img className="sm:w-auto w-1/2" src={image.logo} />
+              <p className="sm:w-[575px] mt-[30px]">{image.text}</p>
               <a
                 href="#"
                 className="text-xl mt-[80px] px-9 py-3 block w-[200px] h-[52px] bg-[#D58288] text-white text-uppercase rounded-[10px]"
