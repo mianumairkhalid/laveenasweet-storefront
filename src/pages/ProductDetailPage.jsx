@@ -21,6 +21,9 @@ import SanKaYa1 from "../img/San-Ka-Ya_1.png";
 import BelgiumChocolateCake from "../img/BelgiumFlouelessChocolateCake.png";
 import PuddingChocolateCake from "../img/PuddingChocolateCake.jpg";
 import ChocolateMousseCake from "../img/ChocolateMousseCake.jpg";
+import productDetail1 from "../img/productDetail1.jpeg";
+import productDetail2 from "../img/productDetail2.jpeg";
+import productDetail3 from "../img/productDetail3.jpeg";
 import ORIGINALMILO from "../img/ORIGINALMILO.png";
 
 const reviews = {
@@ -37,63 +40,8 @@ const reviews = {
       author: "Emily Selman",
       avatarSrc:
         "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
-    },
-    {
-      id: 2,
-      rating: 5,
-      content: `
-          <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
-        `,
-      date: "July 12, 2021",
-      datetime: "2021-07-12",
-      author: "Hector Gibbons",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
-    },
-    // More reviews...
+    }
   ],
-};
-const faqs = [
-  {
-    question: "What format are these icons?",
-    answer:
-      "The icons are in SVG (Scalable Vector Graphic) format. They can be imported into your design tool of choice and used directly in code.",
-  },
-  {
-    question: "Can I use the icons at different sizes?",
-    answer:
-      "Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don't recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.",
-  },
-  // More FAQs...
-];
-const license = {
-  href: "#",
-  summary:
-    "For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.",
-  content: `
-      <h4>Overview</h4>
-      
-      <p>For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.</p>
-      
-      <ul role="list">
-      <li>You\'re allowed to use the icons in unlimited projects.</li>
-      <li>Attribution is not required to use the icons.</li>
-      </ul>
-      
-      <h4>What you can do with it</h4>
-      
-      <ul role="list">
-      <li>Use them freely in your personal and professional work.</li>
-      <li>Make them your own. Change the colors to suit your project or brand.</li>
-      </ul>
-      
-      <h4>What you can\'t do with it</h4>
-      
-      <ul role="list">
-      <li>Don\'t be greedy. Selling or distributing these icons in their original or modified state is prohibited.</li>
-      <li>Don\'t be evil. These icons cannot be used on websites or applications that promote illegal or immoral beliefs or activities.</li>
-      </ul>
-    `,
 };
 const navigation = {
   categories: [
@@ -339,24 +287,46 @@ const product = {
     {
       id: 1,
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-featured-product-shot.jpg",
+      productDetail1,
       imageAlt: "Back of women's Basic Tee in black.",
       primary: true,
     },
     {
       id: 2,
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-01.jpg",
+      productDetail2,
       imageAlt: "Side profile of women's Basic Tee in black.",
       primary: false,
     },
     {
       id: 3,
       imageSrc:
-        "https://tailwindui.com/img/ecommerce-images/product-page-01-product-shot-02.jpg",
+      productDetail3,
       imageAlt: "Front of women's Basic Tee in black.",
       primary: false,
     },
+    {
+        id: 2,
+        imageSrc:
+        productDetail2,
+        imageAlt: "Side profile of women's Basic Tee in black.",
+        primary: false,
+      },
+      {
+        id: 3,
+        imageSrc:
+        productDetail3,
+        imageAlt: "Front of women's Basic Tee in black.",
+        primary: false,
+      },
+      {
+        id: 2,
+        imageSrc:
+        productDetail2,
+        imageAlt: "Side profile of women's Basic Tee in black.",
+        primary: false,
+      },
+      
   ],
   colors: [
     { name: "Black", bgColor: "bg-gray-900", selectedColor: "ring-gray-900" },
@@ -569,7 +539,7 @@ export default function ProductDetailPage() {
         </Dialog>
       </Transition.Root>
 
-      <main className="mx-auto mt-8 px-4 pb-16 sm:px-6 sm:pb-24 lg:mx-[100px] lg:px-8">
+      <main className="mx-auto mt-8 px-4 pb-10 sm:px-6 sm:pb-10 lg:mx-[100px] lg:px-8">
         <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-5 lg:col-start-8">
             <div className="">
@@ -586,7 +556,7 @@ export default function ProductDetailPage() {
           <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
             <h2 className="sr-only">Images</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+            <div className="grid grid-cols-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-8">
               {product.images.map((image) => (
                 <img
                   key={image.id}
@@ -594,7 +564,7 @@ export default function ProductDetailPage() {
                   alt={image.imageAlt}
                   className={classNames(
                     image.primary
-                      ? "lg:col-span-2 lg:row-span-2"
+                      ? "lg:col-span-5 lg:row-span-2"
                       : "hidden lg:block",
                     "rounded-lg"
                   )}
@@ -702,7 +672,7 @@ export default function ProductDetailPage() {
               </div>
               <button
                 type="submit"
-                className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-[#D5828B] py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Add to cart
               </button>
@@ -710,44 +680,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        <section className="bg-white">
-          <div className="mx-auto  py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-            <div className="">
-              <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
-                Related products
-              </h2>
-            </div>
-
-            <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 lg:mt-16">
-              {laveenaRelatedPro.map((product) => (
-                <div
-                  key={product.id}
-                  className="group relative sm:w-auto w-[250px] mx-auto"
-                >
-                  <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
-                    <img
-                      src={product.imageSrc}
-                      className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
-                    />
-                  </div>
-                  <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
-                    <a href={product.href}>
-                      <span className="absolute inset-0" />
-                      {product.name}
-                    </a>
-                  </h3>
-
-                  <p className="mt-2 text-base font-medium text-[#d5828b]">
-                    {product.price}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      <div>
-        <div className="mx-auto mt-16 lg:mx-[100px] lg:col-span-4 lg:mt-0 lg:max-w-none">
+        <div className=" mt-16">
+        <div className="mx-auto lg:mx-[100px] lg:col-span-4 lg:mt-0 lg:max-w-none">
           <Tab.Group as="div">
             <div className="border-b border-gray-200">
               <Tab.List className="-mb-px justify-center flex space-x-8">
@@ -802,6 +736,41 @@ export default function ProductDetailPage() {
                   <h3 className="text-[20px] font-bold leading-[30px] mb-10 mt-5">
                     Reviews
                   </h3>
+
+                  <div className="pr-5">
+                  {reviews.featured.map((review, reviewIdx) => (
+                    <div key={review.id} className="flex space-x-4 text-sm text-gray-500">
+                      <div className="flex-none py-10">
+                        <img src={review.avatarSrc} alt="" className="h-10 w-10 rounded-full bg-gray-100" />
+                      </div>
+                      <div className={classNames(reviewIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-10')}>
+                        <h3 className="font-medium text-gray-900">{review.author}</h3>
+                        <p>
+                          <time dateTime={review.datetime}>{review.date}</time>
+                        </p>
+
+                        <div className="mt-4 flex items-center">
+                          {[0, 1, 2, 3, 4].map((rating) => (
+                            <StarIcon
+                              key={rating}
+                              className={classNames(
+                                review.rating > rating ? 'text-yellow-400' : 'text-gray-300',
+                                'h-5 w-5 flex-shrink-0'
+                              )}
+                              aria-hidden="true"
+                            />
+                          ))}
+                        </div>
+                        <p className="sr-only">{review.rating} out of 5 stars</p>
+
+                        <div
+                          className="prose prose-sm mt-4 max-w-none text-gray-500"
+                          dangerouslySetInnerHTML={{ __html: review.content }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                  </div>
                 </div>
                 <div className="sm:w-1/2">
                   <h3 className="text-[20px] font-bold leading-[30px] mt-5">
@@ -824,19 +793,48 @@ export default function ProductDetailPage() {
                 </div>
                 </div>
               </Tab.Panel>
-
-              <Tab.Panel className="pt-10">
-                <h3 className="sr-only">License</h3>
-
-                <div
-                  className="prose prose-sm max-w-none text-gray-500"
-                  dangerouslySetInnerHTML={{ __html: license.content }}
-                />
-              </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
         </div>
       </div>
+
+        <section className="bg-white">
+          <div className="mx-auto  py-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
+            <div className="">
+              <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
+                Related products
+              </h2>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 lg:mt-16">
+              {laveenaRelatedPro.map((product) => (
+                <div
+                  key={product.id}
+                  className="group relative sm:w-auto w-[250px] mx-auto"
+                >
+                  <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
+                    <img
+                      src={product.imageSrc}
+                      className="h-[230px] w-[230px] rounded-[20px] object-cover object-center"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-[21px] font-semibold text-[#3c0603]">
+                    <a href={product.href}>
+                      <span className="absolute inset-0" />
+                      {product.name}
+                    </a>
+                  </h3>
+
+                  <p className="mt-2 text-base font-medium text-[#d5828b]">
+                    {product.price}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+      
     </div>
   );
 }
