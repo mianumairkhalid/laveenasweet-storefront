@@ -781,7 +781,7 @@ export default function ProductDetailPage() {
                   <textarea name="" rows="7" className="bg-[#ECECEC] w-full rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-3 mt-5" placeholder="Your Review"></textarea>
                   <div className="mt-5 sm:flex justify-between gap-x-5">
                     <input type="text" placeholder="Name" className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5" />
-                    <input type="text" placeholder="Name" className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5" />
+                    <input type="email" placeholder="Email" className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5" />
                   </div>
                   <div className="flex items-center mt-5">
                     <input type="checkbox" />
