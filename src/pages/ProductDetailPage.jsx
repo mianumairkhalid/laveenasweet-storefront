@@ -801,7 +801,7 @@ export default function ProductDetailPage() {
         <section className="bg-white">
           <div className="mx-auto  py-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
             <div className="">
-              <h2 className="text-center text-[48px] font-normal leading-[53px] fontCopperplate">
+              <h2 className="text-center text-[48px] font-normal leading-[53px]">
                 Related products
               </h2>
             </div>
