@@ -221,7 +221,7 @@ function Home() {
             <p className="text-[24px] text-[#727574] mt-5 font-normal leading-[40px]">
               อเมริกันวาฟเฟิล
             </p>
-            <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
+            <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               AMERICAN WAFFLE
             </h3>
             <img
@@ -229,7 +229,7 @@ function Home() {
               className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
-            <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
+            <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               89.-
             </h4>
 
@@ -250,7 +250,7 @@ function Home() {
             <p className="text-[24px] text-[#727574] mt-5 font-normal leading-[40px]">
               เบลเยี่ยมช็อคไร้แป้ง
             </p>
-            <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
+            <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               BELGIUM FLOURLESS CHOCOLATE CAKE
             </h3>
             <img
@@ -258,7 +258,7 @@ function Home() {
               className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
-            <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
+            <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               149.-
             </h4>
 
@@ -269,7 +269,7 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#E7EBDE] md:w-1/2 py-14  lg:w-1/4 text-center px-8">
+          <div className="bg-[#E7EBDE] md:w-1/2 py-14  lg:w-1/4 text-center px-8 mt-0 sm:mt-8 lg:mt-0">
             <img
               className="w-[34px] h-[34px] mx-auto"
               src={unitedStates3}
@@ -278,7 +278,7 @@ function Home() {
             <p className="text-[24px] text-[#727574] mt-5 font-normal leading-[40px]">
               พายฝรั่งเศสไส้มะพร้าวอ่อน
             </p>
-            <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
+            <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               COCONUT FRENCH PIE
             </h3>
             <img
@@ -286,7 +286,7 @@ function Home() {
               className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
-            <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
+            <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               149.-
             </h4>
 
@@ -297,7 +297,7 @@ function Home() {
               View More
             </a>
           </div>
-          <div className="bg-[#FDFAF6] md:w-1/2 py-14  lg:w-1/4 text-center px-8">
+          <div className="bg-[#FDFAF6] md:w-1/2 py-14  lg:w-1/4 text-center px-8 mt-0 sm:mt-8 lg:mt-0">
             <img
               className="w-[34px] h-[34px] mx-auto"
               src={unitedStates4}
@@ -306,7 +306,7 @@ function Home() {
             <p className="text-[24px] text-[#727574] mt-5 font-normal leading-[40px]">
               เค้กสังขยา
             </p>
-            <h3 className="mt-5 text-[32px] min-h-[300px] leading-[46px] font-bold font-sans">
+            <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               SAN KA YA
             </h3>
             <img
@@ -314,7 +314,7 @@ function Home() {
               className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
-            <h4 className="text-[48px] leading-[48px] font-bold min-h-[200px] text-black mt-5">
+            <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               199.-
             </h4>
 
@@ -336,7 +336,7 @@ function Home() {
             </h2>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 lg:mt-16">
+          <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 sm:mt-[40px] lg:mt-16">
             {products.map((product) => (
               <div key={product.id} className="group relative sm:w-auto w-[250px] mx-auto">
                 <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
@@ -419,7 +419,7 @@ function Home() {
               Blogs
             </h2>
           </div>
-          <div className="mx-auto mt-12 grid gap-6 md:grid-cols-2 lg:max-w-[1120px] lg:grid-cols-3">
+          <div className="mx-auto  grid gap-6 md:grid-cols-2 lg:max-w-[1120px] lg:grid-cols-3 mt-[40px]">
             {posts.map((post) => (
               <div
                 key={post.title}

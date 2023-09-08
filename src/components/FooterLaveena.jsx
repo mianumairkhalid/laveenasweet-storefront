@@ -84,20 +84,20 @@ function FooterLaveena() {
       </h2>
       
       <div className="footerBgImg relative footer-main">
-        <div className="mx-auto max-w-7xl pb-16 pt-16 sm:pt-24 lg:pt-22">
+        <div className="mx-auto max-w-7xl pb-16 pt-16 sm:pt-16 lg:pt-22">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-[#000000] opacity-50"
         />
-          <div className="xl:flex relative xl:justify-around">
-            <div className="w-[60%] space-y-8">
+          <div className="flex flex-wrap relative xl:justify-around px-4 sm:px-8 lg:px-4">
+            <div className="w-[100%] lg:w-[60%] space-y-8">
               <img className="w-56 relative" src={LaveenaLogo} alt="help name" />
               <p className="text-[20px] leading-[33px] relative lg:pr-[150px] text-white">
                 Laveena ทางเลือกใหม่ของผู้นิยมเบเกอรี่ หวานน้อย จากการผลิตแบบ
                 homemade
               </p>
             </div>
-            <div className="w-[20%] ">
+            <div className="w-[50%] sm:w-[30%] lg:w-[20%] mt-[70px] lg:mt-0">
               <h3 className="text-[22px] font-semibold relative leading-6 text-white">
                 Info
               </h3>
@@ -115,7 +115,7 @@ function FooterLaveena() {
               </ul>
             </div>
 
-            <div className="w-[20%] ">
+            <div className="w-[50%] sm:w-[30%] lg:w-[20%] mt-[70px] lg:mt-0">
               <h3 className="text-[22px] relative font-semibold leading-6 text-white">
                 Help
               </h3>

@@ -89,7 +89,7 @@ function AboutUs() {
         </h2>
       </div>
 
-      <div className="max-w-[980px] mx-auto mt-[100px] hidden md:block">
+      <div className="max-w-[980px] mx-auto mt-[100px] hidden md:block md:mx-[20px]">
         <div className="qodef-shortcode qodef-m qodef-qi-timeline qodef-timeline--vertical qodef-timeline-layout--vertical-separated qodef-line--outside qodef-point--diamond qodef-qi--has-appear qodef-reverse-padding qodef-qi--appeared">
           <div className="qodef-e qodef-e-item  elementor-repeater-item-fac96c6 qodef-obverse">
             <div className="qodef-e-line-holder">
@@ -112,7 +112,7 @@ function AboutUs() {
               </div>
               <div className="qodef-e-content-holder">
                 <div className="qodef-e-date">2530 </div>
-                <h4 className="qodef-e-title">BEGINNING OF OUR JOURNEY </h4>
+                <h4 className="qodef-e-title fontCopperplate">BEGINNING OF OUR JOURNEY </h4>
                 <p className="qodef-e-text">
                   Laveena (ลา-วี-น่า) ชื่อเรียกจากเพื่อนชาวอเมริกัน
                   ถูกนำมาตั้งเป็นชื่อแบรนด์ขนมคุณภาพ ที่ปรุงด้วยความพิถีพิถัน
@@ -287,8 +287,7 @@ function AboutUs() {
           <span className="font-bold text-[44px]">คนในครอบครัว</span>
           เราได้รับ
           <h2
-            class="text-[30px] leading-[32px] italic mt-2"
-            style={{ fontFamily: "serif" }}
+            class="text-[30px] leading-[36px] mt-1 fontDancingScript"
           >
             Laveena’s TheBaking Room
           </h2>
@@ -303,8 +302,7 @@ function AboutUs() {
           <span className="font-bold text-[32px]">คนในครอบครัว</span>
           เราได้รับ
           <h2
-            class="text-[30px] leading-[32px] italic mt-2"
-            style={{ fontFamily: "serif" }}
+            class="text-[30px] leading-[32px] fontDancingScript mt-2"
           >
             Laveena’s TheBaking Room
           </h2>
