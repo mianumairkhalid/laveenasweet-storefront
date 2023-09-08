@@ -93,7 +93,7 @@ function LaveenaShop() {
   }
   return (
     <>
-      <div className="bg-white py-16">
+      <div className="bg-white py-5 lg:py-16">
         <div>
           {/* Mobile filter dialog */}
           <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -167,13 +167,13 @@ function LaveenaShop() {
                 Products
               </h2>
 
-              <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-4 lg:gap-y-10 lg:grid-cols-4">
                 {/* Filters */}
                 <div>
-                  <div className="border-b border-[#E1E8ED] pb-10">
+                  <div className="border-b border-[#E1E8ED] pb-10 hidden lg:block">
                     <label
                       htmlFor="Search"
-                      className="block text-sm font-medium text-gray-700"
+                      className="block text-base font-medium text-gray-700"
                     >
                       Search
                     </label>
@@ -190,7 +190,7 @@ function LaveenaShop() {
                       </div>
                     </div>
                   </div>
-                  <div className="pt-10 border-b border-[#E1E8ED]">
+                  <div className="pt-10  border-[#E1E8ED]">
                     <form className="hidden lg:block">
                       <h3 className="sr-only">Categories</h3>
                       <ul
@@ -211,7 +211,8 @@ function LaveenaShop() {
                       </ul>
                     </form>
                   </div>
-                  <div className="pt-5 border-b border-[#E1E8ED] pb-10">
+                  
+                  <div className="pt-5 border-b border-[#E1E8ED] pb-10 hidden lg:block">
                     <h3 className="text-[18px] font-bold leading-[27px]">
                       กรองตามราคา
                     </h3>
@@ -242,7 +243,7 @@ function LaveenaShop() {
                         as="div"
                         className="relative inline-block text-left"
                       >
-                        <div>
+                        <div className="lg:border border-solid border-green-600 rounded-lg lg:px-5 py-1">
                           <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                             Default Sorting
                             <ChevronDownIcon
@@ -296,6 +297,7 @@ function LaveenaShop() {
                       </button>
                     </div>
                   </div>
+                  <div>
                   <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-8 lg:gap-x-4">
                     {products.map((product) => (
                       <div key={product.id} className="group relative">
@@ -319,6 +321,10 @@ function LaveenaShop() {
                         </p>
                       </div>
                     ))}
+                    </div>
+                    <div className="text-center space-x-5 mt-20">
+          <span className="text-[#D5828B]">1</span><span>2</span>
+        </div>
                   </div>
 
                   {/* /End replace */}
@@ -327,9 +333,7 @@ function LaveenaShop() {
             </section>
           </main>
         </div>
-        <div className="text-center space-x-5">
-          <span className="text-[#D5828B]">1</span><span>2</span>
-        </div>
+        
       </div>
     </>
   );
