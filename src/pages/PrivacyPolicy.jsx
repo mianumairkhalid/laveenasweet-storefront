@@ -2,7 +2,7 @@ import React from "react";
 
 function PrivacyPolicy() {
   return (
-    <div className="max-w-[1280px] mx-auto privacy-policy my-[80px]">
+    <div className="max-w-[1280px] mx-auto privacy-policy my-[80px] px-4 sm:px-8 lg:px-0">
       <h2 className="text-[35px] leading-[53px] font-bold">
         นโยบายการความเป็นส่วนตัว
       </h2>
@@ -237,7 +237,7 @@ function PrivacyPolicy() {
           บางอันจะถูกใช้เพื่อให้สามารถใช้งานโปรแกรมแฟลช
           โดยแฟลชคุกกี้จะถูกลบได้จากภายในอโดบีแฟลชเท่านั้นไม่ใช่บนบราวเซอร์
           กรุณาเข้าไปดูวิธีการจัดการตั้งค่าความเป็นส่วนตัวของท่านและลบแฟลชคุกกี้ได้ที่{" "}
-          <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager.html">
+          <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager.html" className="break-words">
             http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager.html
           </a>
         </li>
