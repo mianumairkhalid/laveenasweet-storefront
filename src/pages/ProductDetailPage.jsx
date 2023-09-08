@@ -40,7 +40,7 @@ const reviews = {
       author: "John Doe",
       avatarSrc:
         "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
-    }
+    },
   ],
 };
 const navigation = {
@@ -286,47 +286,40 @@ const product = {
   images: [
     {
       id: 1,
-      imageSrc:
-      productDetail1,
+      imageSrc: productDetail1,
       imageAlt: "Back of women's Basic Tee in black.",
       primary: true,
     },
     {
       id: 2,
-      imageSrc:
-      productDetail2,
+      imageSrc: productDetail2,
       imageAlt: "Side profile of women's Basic Tee in black.",
       primary: false,
     },
     {
       id: 3,
-      imageSrc:
-      productDetail3,
+      imageSrc: productDetail3,
       imageAlt: "Front of women's Basic Tee in black.",
       primary: false,
     },
     {
-        id: 2,
-        imageSrc:
-        productDetail2,
-        imageAlt: "Side profile of women's Basic Tee in black.",
-        primary: false,
-      },
-      {
-        id: 3,
-        imageSrc:
-        productDetail3,
-        imageAlt: "Front of women's Basic Tee in black.",
-        primary: false,
-      },
-      {
-        id: 2,
-        imageSrc:
-        productDetail2,
-        imageAlt: "Side profile of women's Basic Tee in black.",
-        primary: false,
-      },
-      
+      id: 2,
+      imageSrc: productDetail2,
+      imageAlt: "Side profile of women's Basic Tee in black.",
+      primary: false,
+    },
+    {
+      id: 3,
+      imageSrc: productDetail3,
+      imageAlt: "Front of women's Basic Tee in black.",
+      primary: false,
+    },
+    {
+      id: 2,
+      imageSrc: productDetail2,
+      imageAlt: "Side profile of women's Basic Tee in black.",
+      primary: false,
+    },
   ],
   colors: [
     { name: "Black", bgColor: "bg-gray-900", selectedColor: "ring-gray-900" },
@@ -681,122 +674,171 @@ export default function ProductDetailPage() {
         </div>
 
         <div className=" mt-16">
-        <div className="mx-auto lg:mx-[100px] lg:col-span-4 lg:mt-0 lg:max-w-none">
-          <Tab.Group as="div">
-            <div className="border-b border-gray-200">
-              <Tab.List className="-mb-px justify-center flex space-x-8">
-                <Tab
-                  className={({ selected }) =>
-                    classNames(
-                      selected ? "border-black" : "border-transparent",
-                      "whitespace-nowrap text-[12px] font-semibold text-[#383838] border-b-2 py-6"
-                    )
-                  }
-                >
-                  ADDITIONAL INFORMATION
-                </Tab>
-                <Tab
-                  className={({ selected }) =>
-                    classNames(
-                      selected ? "border-black" : "border-transparent",
-                      "whitespace-nowrap text-[12px] font-semibold text-[#383838] border-b-2 py-6"
-                    )
-                  }
-                >
-                  REVIEWS (0)
-                </Tab>
-              </Tab.List>
-            </div>
-            <Tab.Panels as={Fragment}>
-              <Tab.Panel className="mb-5">
-                <h3 className="text-[20px] font-bold leading-[30px] mb-10 mt-5">
-                  Additional information
-                </h3>
-                <div className="sm:flex px-3 py-2">
-                  <p className="sm:w-[30%] text-[15px] text-[#383838] font-medium">
-                    Flavor
-                  </p>
-                  <p className="sm:w-[70%] text-[15px] font-noraml text-[#383838]">
-                    Vanilla, Chocolate, Coconut, Coffee, Orange, Pandan
-                  </p>
-                </div>
-                <div className="bg-[#F8F9FB] sm:flex px-3 py-2">
-                  <p className="sm:w-[30%] text-[15px] text-[#383838] font-medium">
-                    Size
-                  </p>
-                  <p className="sm:w-[70%] text-[15px] font-noraml text-[#383838]">
-                    1 Pound, 2 Pound, 3 Pound
-                  </p>
-                </div>
-              </Tab.Panel>
-
-              <Tab.Panel>
-                <div className="sm:flex">
-                <div className="sm:w-1/2">
+          <div className="mx-auto lg:mx-[100px] lg:col-span-4 lg:mt-0 lg:max-w-none">
+            <Tab.Group as="div">
+              <div className="border-b border-gray-200">
+                <Tab.List className="-mb-px justify-center flex space-x-8">
+                  <Tab
+                    className={({ selected }) =>
+                      classNames(
+                        selected ? "border-black" : "border-transparent",
+                        "whitespace-nowrap text-[12px] font-semibold text-[#383838] border-b-2 py-6"
+                      )
+                    }
+                  >
+                    ADDITIONAL INFORMATION
+                  </Tab>
+                  <Tab
+                    className={({ selected }) =>
+                      classNames(
+                        selected ? "border-black" : "border-transparent",
+                        "whitespace-nowrap text-[12px] font-semibold text-[#383838] border-b-2 py-6"
+                      )
+                    }
+                  >
+                    REVIEWS (0)
+                  </Tab>
+                </Tab.List>
+              </div>
+              <Tab.Panels as={Fragment}>
+                <Tab.Panel className="mb-5">
                   <h3 className="text-[20px] font-bold leading-[30px] mb-10 mt-5">
-                    Reviews
+                    Additional information
                   </h3>
+                  <div className="sm:flex px-3 py-2">
+                    <p className="sm:w-[30%] text-[15px] text-[#383838] font-medium">
+                      Flavor
+                    </p>
+                    <p className="sm:w-[70%] text-[15px] font-noraml text-[#383838]">
+                      Vanilla, Chocolate, Coconut, Coffee, Orange, Pandan
+                    </p>
+                  </div>
+                  <div className="bg-[#F8F9FB] sm:flex px-3 py-2">
+                    <p className="sm:w-[30%] text-[15px] text-[#383838] font-medium">
+                      Size
+                    </p>
+                    <p className="sm:w-[70%] text-[15px] font-noraml text-[#383838]">
+                      1 Pound, 2 Pound, 3 Pound
+                    </p>
+                  </div>
+                </Tab.Panel>
 
-                  <div className="pr-5">
-                  {reviews.featured.map((review, reviewIdx) => (
-                    <div key={review.id} className="flex space-x-4 text-sm text-gray-500">
-                      <div className="flex-none py-10">
-                        <img src={review.avatarSrc} alt="" className="h-10 w-10 rounded-full bg-gray-100" />
-                      </div>
-                      <div className={classNames(reviewIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-10')}>
-                        <h3 className="font-medium text-gray-900">{review.author}</h3>
-                        <p>
-                          <time dateTime={review.datetime}>{review.date}</time>
-                        </p>
+                <Tab.Panel>
+                  <div className="sm:flex">
+                    <div className="sm:w-1/2">
+                      <h3 className="text-[20px] font-bold leading-[30px] mb-10 mt-5">
+                        Reviews
+                      </h3>
 
-                        <div className="mt-4 flex items-center">
-                          {[0, 1, 2, 3, 4].map((rating) => (
-                            <StarIcon
-                              key={rating}
+                      <div className="pr-5">
+                        {reviews.featured.map((review, reviewIdx) => (
+                          <div
+                            key={review.id}
+                            className="flex space-x-4 text-sm text-gray-500"
+                          >
+                            <div className="flex-none py-10">
+                              <img
+                                src={review.avatarSrc}
+                                alt=""
+                                className="h-10 w-10 rounded-full bg-gray-100"
+                              />
+                            </div>
+                            <div
                               className={classNames(
-                                review.rating > rating ? 'text-yellow-400' : 'text-gray-300',
-                                'h-5 w-5 flex-shrink-0'
+                                reviewIdx === 0
+                                  ? ""
+                                  : "border-t border-gray-200",
+                                "flex-1 py-10"
                               )}
-                              aria-hidden="true"
-                            />
-                          ))}
-                        </div>
-                        <p className="sr-only">{review.rating} out of 5 stars</p>
+                            >
+                              <h3 className="font-medium text-gray-900">
+                                {review.author}
+                              </h3>
+                              <p>
+                                <time dateTime={review.datetime}>
+                                  {review.date}
+                                </time>
+                              </p>
 
-                        <div
-                          className="prose prose-sm mt-4 max-w-none text-gray-500"
-                          dangerouslySetInnerHTML={{ __html: review.content }}
-                        />
+                              <div className="mt-4 flex items-center">
+                                {[0, 1, 2, 3, 4].map((rating) => (
+                                  <StarIcon
+                                    key={rating}
+                                    className={classNames(
+                                      review.rating > rating
+                                        ? "text-yellow-400"
+                                        : "text-gray-300",
+                                      "h-5 w-5 flex-shrink-0"
+                                    )}
+                                    aria-hidden="true"
+                                  />
+                                ))}
+                              </div>
+                              <p className="sr-only">
+                                {review.rating} out of 5 stars
+                              </p>
+
+                              <div
+                                className="prose prose-sm mt-4 max-w-none text-gray-500"
+                                dangerouslySetInnerHTML={{
+                                  __html: review.content,
+                                }}
+                              />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
+                    <div className="sm:w-1/2">
+                      <h3 className="text-[20px] font-bold leading-[30px] mt-5">
+                        Add a review
+                      </h3>
+                      <p className="mt-5 font-normal text-[13px] text-[#383838]">
+                        Your email address will not be published. Required
+                        fields are marked{" "}
+                        <span className="text-red-600">*</span>
+                      </p>
+                      <div>
+                        <p className="mt-5 font-normal text-[12px] text-[#383838]">
+                          YOUR RATING <span className="text-red-500">*</span>
+                        </p>
+                      </div>
+                      <textarea
+                        name=""
+                        rows="7"
+                        className="bg-[#ECECEC] w-full rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-3 mt-5"
+                        placeholder="Your Review"
+                      ></textarea>
+                      <div className="mt-5 sm:flex justify-between gap-x-5">
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5"
+                        />
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5"
+                        />
+                      </div>
+                      <div className="flex items-center mt-5">
+                        <input type="checkbox" />
+                        <p className="ml-3 font-normal text-[13px] text-[#383838]">
+                          {" "}
+                          Save my name, email, and website in this browser for
+                          the next time I comment.
+                        </p>
+                      </div>
+                      <button className="bg-[#D5828B] text-[14px] font-medium mt-5 rounded-md px-4 py-2 text-white mb-10">
+                        Submit
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div className="sm:w-1/2">
-                  <h3 className="text-[20px] font-bold leading-[30px] mt-5">
-                    Add a review
-                  </h3>
-                  <p className="mt-5 font-normal text-[13px] text-[#383838]">Your email address will not be published. Required fields are marked <span className="text-red-600">*</span></p>
-                  <div><p className="mt-5 font-normal text-[12px] text-[#383838]">YOUR RATING <span className="text-red-500">*</span></p></div>
-                  <textarea name="" rows="7" className="bg-[#ECECEC] w-full rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-3 mt-5" placeholder="Your Review"></textarea>
-                  <div className="mt-5 sm:flex justify-between gap-x-5">
-                    <input type="text" placeholder="Name" className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5" />
-                    <input type="email" placeholder="Email" className="bg-[#ECECEC] sm:w-1/2 rounded-xl px-4 placeholder:text-[#2c2b2b] text-[#383838] font-normal text-[15px] py-2.5" />
-                  </div>
-                  <div className="flex items-center mt-5">
-                    <input type="checkbox" />
-                    <p className="ml-3 font-normal text-[13px] text-[#383838]"> Save my name, email, and website in this browser for the next time I comment.</p>
-                  </div>
-                  <button className="bg-[#D5828B] text-[14px] font-medium mt-5 rounded-md px-4 py-2 text-white mb-10">
-                Submit
-                  </button>
-                </div>
-                </div>
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
         </div>
-      </div>
 
         <section className="bg-white">
           <div className="mx-auto  py-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
@@ -834,7 +876,6 @@ export default function ProductDetailPage() {
           </div>
         </section>
       </main>
-      
     </div>
   );
 }
