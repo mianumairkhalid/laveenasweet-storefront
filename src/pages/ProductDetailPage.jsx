@@ -543,7 +543,7 @@ export default function ProductDetailPage() {
         </Dialog>
       </Transition.Root>
 
-      <main className="mx-auto mt-8 px-4 pb-10 sm:px-6 sm:pb-10 lg:mx-[100px] lg:px-8">
+      <main className="mx-auto mt--8 lg:mt-16 px-4 pb-10 sm:px-6 sm:pb-10 lg:mx-[100px] lg:px-8">
         <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-5 lg:col-start-8">
             <div className="">
@@ -865,7 +865,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        <section className="bg-white">
+        <section className="bg-white hidden">
           <div className="mx-auto  py-16 px-4 sm:pt-24 sm:px-6 lg:px-8">
             <div className="">
               <h2 className="text-center text-[48px] font-normal leading-[53px]">
