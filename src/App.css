@@ -429,6 +429,19 @@ li.meta-categories:after {
 }
 
 
+
+input[type='range']::-webkit-slider-thumb {
+  width: 18px;
+  -webkit-appearance: none;
+  height: 18px;
+  cursor: ew-resize;
+  background: #D5828B;
+  border-radius: 50px;;
+  border: 1px solid #D5828B;
+}
+
+
+
 @keyframes loadingAnim{
   from{transform:rotate(0deg)}
   to{transform:rotate(360deg)}
