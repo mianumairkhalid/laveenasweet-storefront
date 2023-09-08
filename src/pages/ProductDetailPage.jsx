@@ -25,6 +25,7 @@ import productDetail1 from "../img/productDetail1.jpeg";
 import productDetail2 from "../img/productDetail2.jpeg";
 import productDetail3 from "../img/productDetail3.jpeg";
 import ORIGINALMILO from "../img/ORIGINALMILO.png";
+import ImageSlider from "../components/ImageSlider";
 
 const reviews = {
   average: 4,
@@ -279,6 +280,7 @@ const product = {
   info: "280.00 – 750.00",
   price: "750.00",
   href: "#",
+  desc:"เค้กช็อกโกแลตไร้แป้ง ที่เราได้สูตรลับมาจากเพื่อนชาวเบลเยี่ยม พิเศษตรงความผสมผสานของช็อคโกแล็ตเกรดพรีเมี่ยม 3 ตัวนำเข้าจากเบลเยี่ยมโดยแท้ หวานน้อย เข้มข้น แถมแคลน้อย อร่อยแล้วอ้วนน้อยลงครึ่งนึง",
   breadcrumbs: [
     { id: 1, name: "Women", href: "#" },
     { id: 2, name: "Clothing", href: "#" },
@@ -364,6 +366,15 @@ export default function ProductDetailPage() {
   const [open, setOpen] = useState(false);
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const [value, setValue] = useState(0);
+
+  const decrement = () => {
+    setValue((prevValue) => prevValue - 1);
+  };
+
+  const increment = () => {
+    setValue((prevValue) => prevValue + 1);
+  };
 
   return (
     <div className="bg-white">
@@ -539,8 +550,11 @@ export default function ProductDetailPage() {
               <h1 className="text-[30px] font-bold text-[#3C0603]">
                 {product.name}
               </h1>
-              <p className="text-[20px] font-bold text-[#383838] mt-5">
+              <p className="text-[20px] font-bold text-[#D5828B] mt-5">
                 {product.info}
+              </p>
+              <p className="text-[16px] font-normal text-[#383838] mt-5">
+                {product.desc}
               </p>
             </div>
           </div>
@@ -548,26 +562,13 @@ export default function ProductDetailPage() {
           {/* Image gallery */}
           <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
             <h2 className="sr-only">Images</h2>
+            <ImageSlider />
 
-            <div className="grid grid-cols-4 lg:grid-cols-5 lg:grid-rows-1 lg:gap-8">
-              {product.images.map((image) => (
-                <img
-                  key={image.id}
-                  src={image.imageSrc}
-                  alt={image.imageAlt}
-                  className={classNames(
-                    image.primary
-                      ? "lg:col-span-5 lg:row-span-2"
-                      : "hidden lg:block",
-                    "rounded-lg"
-                  )}
-                />
-              ))}
-            </div>
+           
           </div>
 
           <div className="mt-8 lg:col-span-5">
-            <form>
+            <div>
               {/* Size picker */}
               <div className="mt-8">
                 <div className="flex items-center justify-between">
@@ -663,20 +664,44 @@ export default function ProductDetailPage() {
                   </div>
                 </RadioGroup>
               </div>
-              <button
-                type="submit"
-                className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-[#D5828B] py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Add to cart
-              </button>
-            </form>
+              <div className="flex justify-between items-center mt-8 gap-x-3">
+                <div className="custom-number-input w-32">
+                  <div className="flex flex-row w-full rounded-lg relative h-[50px] bg-[#ECECEC] border border-[#C4C4C4]">
+                    <button
+                      onClick={decrement}
+                      className="bg-[#ECECEC] text-gray-600 hover:text-gray-700 h-full w-20 rounded-l-lg cursor-pointer outline-none"
+                    >
+                      <span className="m-auto text-2xl font-thin">−</span>
+                    </button>
+                    <input
+                      type="number"
+                      className="outline-none focus:outline-none text-center w-full bg-[#ECECEC] font-semibold text-md hover:text-black focus:text-black md:text-base cursor-default flex items-center text-gray-700 outline-none"
+                      name="custom-input-number"
+                      value={value}
+                    />
+                    <button
+                      onClick={increment}
+                      className="bg-[#ECECEC] text-gray-600 hover:text-gray-700 h-full w-20 rounded-r-lg cursor-pointer"
+                    >
+                      <span className="m-auto text-2xl font-thin">+</span>
+                    </button>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent hover:bg-[#383838] transition-all duration-200 bg-[#D5828B] py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className=" mt-16">
           <div className="mx-auto lg:mx-[100px] lg:col-span-4 lg:mt-0 lg:max-w-none">
             <Tab.Group as="div">
-              <div className="border-b border-gray-200">
+              <div className="">
                 <Tab.List className="-mb-px justify-center flex space-x-8">
                   <Tab
                     className={({ selected }) =>
@@ -876,6 +901,7 @@ export default function ProductDetailPage() {
           </div>
         </section>
       </main>
+      
     </div>
   );
 }
