@@ -235,7 +235,7 @@ function Home() {
 
             <a
               href="#"
-              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="uppercase inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -264,7 +264,7 @@ function Home() {
 
             <a
               href="#"
-              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="uppercase inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -292,7 +292,7 @@ function Home() {
 
             <a
               href="#"
-              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="uppercase inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -320,7 +320,7 @@ function Home() {
 
             <a
               href="#"
-              className="inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
+              className="uppercase inline-block text-xl font-normal px-7 py-4 bg-[#D58288] text-white text-uppercase rounded-[10px] transition duration-200"
             >
               View More
             </a>
@@ -373,7 +373,7 @@ function Home() {
       <div className="bg-[#D5828B] py-[60px]">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-center text-[48px] font-normal text-white leading-[53px] fontCopperplate">
-            BEST SELLER
+          BIRTHDAY CAKE
           </h2>
           <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] md:px-[150px]">
             Birthday Fresh cream cake from Laveena Cake Box is sure to make
@@ -427,7 +427,7 @@ function Home() {
               >
                 <div className="flex-shrink-0">
                   <img
-                    className="h-52 w-full object-cover rounded-t-[20px] rounded-tr-[20px]"
+                    className="h-64 w-full object-cover rounded-t-[20px] rounded-tr-[20px]"
                     src={post.imageUrl}
                     alt=""
                   />

@@ -70,8 +70,8 @@ function ContactUs() {
         <div className="md:w-1/2 w-full min-h-[310px] HomeMapSec"></div>
       </div>
 
-      <div className="flex justify-between gap-8 max-w-[1250px] md:flex-nowrap flex-wrap mx-[50px] md:mx-auto mt-[120px]">
-        <div className="w-full md:w-1/4 bg-[#E7EBDE] rounded-[20px] py-12 text-center space-y-10">
+      <div className="flex justify-between gap-8 max-w-[1250px] lg:flex-nowrap flex-wrap mx-[50px] md:mx-5 lg:mx-auto mt-[50px] sm:mt-[80px] lg:mt-[120px]">
+        <div className="w-full md:w-[47%] lg:w-1/4  bg-[#E7EBDE] rounded-[20px] py-12 text-center space-y-10">
           <img src={MapIcon} className="mx-auto w-[35px] h-[35px]" />
           <h3 className="text-2xl fontCopperplate">
             Our <br />
@@ -86,7 +86,7 @@ function ContactUs() {
             </a>
           </p>
         </div>
-        <div className="w-full md:w-1/4 bg-[#FDFAF6] rounded-[20px] py-10 text-center space-y-10">
+        <div className="w-full md:w-[47%] lg:w-1/4 bg-[#FDFAF6] rounded-[20px] py-10 text-center space-y-10">
           <img src={Mailicon} className="mx-auto w-[35px] h-[35px]" />
           <h3 className="text-2xl fontCopperplate">
             EMAIL <br />
@@ -98,7 +98,7 @@ function ContactUs() {
             </a>
           </p>
         </div>
-        <div className="w-full md:w-1/4 bg-[#E7EBDE] rounded-[20px] py-12 text-center space-y-10">
+        <div className="w-full md:w-[47%] lg:w-1/4 bg-[#E7EBDE] rounded-[20px] py-12 text-center space-y-10">
           <img src={TimeIcon} className="mx-auto w-[35px] h-[35px]" />
           <h3 className="text-2xl fontCopperplate">
             OPEN <br />
@@ -110,7 +110,7 @@ function ContactUs() {
             Saturday - Sunday, 09.00 - 19.00
           </p>
         </div>
-        <div className="w-full md:w-1/4 bg-[#FDFAF6] rounded-[20px] py-10 text-center space-y-10">
+        <div className="w-full  md:w-[47%]  lg:w-1/4 bg-[#FDFAF6] rounded-[20px] py-10 text-center space-y-10">
           <img src={PhoneIcon} className="mx-auto w-[35px] h-[35px]" />
           <h3 className="text-2xl fontCopperplate">
             PHONE <br />
@@ -123,9 +123,9 @@ function ContactUs() {
         </div>
       </div>
 
-      <div className="max-w-[636px] mx-auto lg:mt-[130px]">
+      <div className="max-w-[636px] mx-5 lg:mx-auto mt-[40px] sm:mt-[80px] lg:mt-[130px]">
         <div className="laveena-widget-container">
-          <h2 className="text-[48px] font-normal text-[#3c0603] leading-[53px] fontCopperplate">
+          <h2 className="text-[36px] sm:text-[48px] font-normal text-[#3c0603] leading-[53px] fontCopperplate">
             We’d love to hear <br />
             from you!
           </h2>
@@ -190,7 +190,7 @@ function ContactUs() {
                   id="about"
                   name="about"
                   rows={7}
-                  className="block w-full rounded-md text-[#3C0603] bg-[#ECECEC]  border-gray-300 focus:border-gray-400 sm:text-sm"
+                  className="block w-full rounded-lg text-[#3C0603] bg-[#ECECEC] border  border-gray-300 focus:border-gray-400 sm:text-sm"
                   defaultValue={''}
                 />
               </div>
@@ -210,7 +210,7 @@ function ContactUs() {
       </div>
 
 
-      <div className="w-full md:mt-[180px]">
+      <div className="w-full mt-[60px] md:mt-[180px]">
       <iframe
         loading="lazy"
         src="https://maps.google.com/maps?q=laveena%20sweet&amp;t=m&amp;z=18&amp;output=embed&amp;iwloc=near"

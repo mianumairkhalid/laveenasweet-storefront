@@ -10,7 +10,7 @@ import TimeLineImg4 from "../img/TimeLineImg4.png";
 function AboutUs() {
   return (
     <>
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900 lg:h-[350px]">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden ">
           <img
@@ -38,11 +38,11 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="sm:flex my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
+      <div className="sm:flex my-20 justify-center lg:max-w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
         <div className="lg:w-1/2">
           <img className="rounded-2xl" src={bannerTop1} alt="" />
         </div>
-        <div className="lg:w-1/2 sm:pl-[120px] sm:pr-[20px]">
+        <div className="lg:w-1/2 sm:pl-[60px]  sm:pr-[20px]">
           <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px] font-normal leading-[48px] text-black fontCopperplate">
             A Perfect Delicious From Taphanhin
           </h2>
@@ -61,7 +61,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="flex lg:flex-row flex-col-reverse my-20 justify-center lg:w-[1290px] mx-auto items-center flex-wrap gap-y-7 px-[20px]">
+      <div className="flex lg:flex-row flex-col-reverse my-20 justify-center lg:max-w-[1290px] mx-auto items-center flex-wrap gap-y-7 px-[20px]">
         <div className="lg:w-1/2 sm:pl-[50px] sm:pr-[100px]">
           <h2 className="lg:text-[48px] sm:text-[32px] mt-[20px] text-[35px]   font-normal leading-[48px] text-black fontCopperplate">
             OUR STORY
