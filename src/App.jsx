@@ -61,6 +61,9 @@ import AboutUs from "./pages/AboutUs";
 import BlogDetail from "./pages/BlogDetail";
 import LaveenaShop from "./pages/LaveenaShop";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+
 
 function App() {
   const navigate = useNavigate();
@@ -194,6 +197,7 @@ function App() {
               <Route path="/laveena-about-us" element={<AboutUs />} />
               <Route path="/blog-detail" element={<BlogDetail />} />
               <Route path="/product" element={<LaveenaShop />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
             </Routes>
             <Cart />
