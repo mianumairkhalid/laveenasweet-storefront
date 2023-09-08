@@ -300,7 +300,7 @@ export default function Example() {
                                   </div>
 
                                   <div>
-                                    <p className="text-[#383838] text-sm font-normal leading-[23px]">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
+                                    <p className="text-[#383838] text-sm font-normal leading-[23px]">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="privacy-policy" className="underline">privacy policy.</a></p>
                                   </div>
 
                                   
