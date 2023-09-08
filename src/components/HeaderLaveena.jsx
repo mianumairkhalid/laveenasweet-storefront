@@ -87,7 +87,7 @@ export default function Example() {
   const cancelButtonRef = useRef(null);
 
   return (
-    <Popover className="relative bg-[#68825B]">
+    <Popover className=" bg-[#68825B] sticky top-0 z-10 ">
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
@@ -329,20 +329,24 @@ export default function Example() {
           </div>
         </Dialog>
       </Transition.Root>
-      <div className="flex items-center justify-between px-6 py-3 md:justify-start md:space-x-10">
+      <div className="flex items-center justify-between px-6 py-3 lg:justify-start lg:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Link to="/">
             <span className="sr-only">Your Company</span>
             <img className="h-auto w-[120px]" src={LaveenaLogo} alt="" />
           </Link>
         </div>
-        <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+        <div className="-my-2 -mr-2 lg:hidden">
+          <Popover.Button className="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <svg class="ct-icon fill-[white]" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" data-type="type-1">
+    <rect y="0.00" width="18" height="1.7" rx="1"></rect>
+    <rect y="6.15" width="18" height="1.7" rx="1"></rect>
+    <rect y="12.3" width="18" height="1.7" rx="1"></rect>
+</svg>
           </Popover.Button>
         </div>
-        <Popover.Group as="nav" className="hidden space-x-16 shadow-sm md:flex">
+        <Popover.Group as="nav" className="hidden space-x-16 shadow-sm lg:flex">
           <Popover className="relative">
             {({ open }) => (
               <>
@@ -365,7 +369,7 @@ export default function Example() {
                   leaveTo="opacity-0 translate-y-1"
                 >
                   <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform lg:left-1/2 lg:ml-0 lg:max-w-2xl lg:-translate-x-1/2">
-                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="overflow-hidden rounded-lg shadow-lg ">
                       <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                         home
                         {solutions.map((solution) => (
@@ -442,7 +446,7 @@ export default function Example() {
             Contact Us
           </Link>
         </Popover.Group>
-        <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+        <div className="hidden items-center justify-end lg:flex md:flex-1 lg:w-0">
           <img
             onClick={() => setOpen(true)}
             className="cursor-pointer w-[80px] mr-4"
@@ -463,7 +467,7 @@ export default function Example() {
       >
         <Popover.Panel
           focus
-          className="z-[999] h-screen w-[80%] ml-auto bg-[#68825B] absolute inset-x-0 top-24 origin-top-right transform p-2 transition md:hidden"
+          className="z-[999] h-screen w-[80%] ml-auto bg-[#68825B] absolute inset-x-0 top-24 origin-top-right transform p-2 transition lg:hidden"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-[#68825B] ring-1 ring-black ring-opacity-5">
             <div>

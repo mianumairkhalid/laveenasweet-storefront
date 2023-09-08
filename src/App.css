@@ -22,6 +22,10 @@
   font-family:Copperplate, Inter
 }
 
+.fontDancingScript {
+  font-family: 'Dancing Script', cursive;
+}
+
 .fontDMSans {
   font-family: 'DM Sans', sans-serif;
 }
@@ -309,10 +313,11 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .qodef-timeline--vertical.qodef-point--diamond .qodef-e-point-holder:after {
-  width: 90px;
+  width: 73px;
 }
 
 .qodef-point--diamond .qodef-e-point-holder:after {
@@ -359,6 +364,7 @@ body {
   font-family: "Copperplate Gothic", Sans-serif;
   font-size: 40px;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 
 .qodef-qi-timeline .qodef-e-title {
@@ -440,6 +446,17 @@ input[type='range']::-webkit-slider-thumb {
   border: 1px solid #D5828B;
 }
 
+
+@media only screen and (max-width:1024px){
+  .qodef-e-text {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .qodef-e-title {
+    font-size: 36px;
+}
+}
 
 
 @keyframes loadingAnim{
