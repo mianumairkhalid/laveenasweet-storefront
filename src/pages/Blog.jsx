@@ -37,7 +37,7 @@ function Blog() {
       ];
   return (
     <>
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900 lg:h-[350px]">
         {/* Decorative image and overlay */}
         <div
           aria-hidden="true"
@@ -49,11 +49,6 @@ function Blog() {
             className="h-full w-full object-cover object-center"
           />
         </div>
-        {/* <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gray-900 opacity-50"
-        /> */}
-
         <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-[100px] lg:px-0">
           <h1 className="text-4xl  text-white lg:text-5xl fontCopperplate">
             BLOGS
@@ -75,11 +70,7 @@ function Blog() {
           <div className="h-1/3 bg-white sm:h-2/3" />
         </div>
         <div className="relative mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 className="text-[48px] font-normal leading-[53px] fontCopperplate">
-              Blogs
-            </h2>
-          </div>
+          
           <div className="mx-auto mt-12 grid max-w-lg gap-6 lg:max-w-[1280px] lg:grid-cols-3">
             {posts.map((post) => (
               <div
@@ -88,7 +79,7 @@ function Blog() {
               >
                 <div className="flex-shrink-0">
                   <img
-                    className="h-52 w-full object-cover rounded-t-[20px] rounded-tr-[20px]"
+                    className="h-[52px] lg:h-64 w-full object-cover rounded-t-[20px] rounded-tr-[20px]"
                     src={post.imageUrl}
                     alt=""
                   />
