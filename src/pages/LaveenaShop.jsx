@@ -18,12 +18,7 @@ import IconRight from "../img/icon-right.png";
 
 function LaveenaShop() {
   const products = [
-    {
-      name: "Belgium Flourless Chocolate Cake",
-      price: "149.00",
-      href: "#",
-      imageSrc: BelgiumChocolateCake,
-    },
+   
     {
       name: "Pudding Chocolate Cake",
       price: "500.00",
@@ -48,12 +43,7 @@ function LaveenaShop() {
       href: "#",
       imageSrc: ORIGINALMILO,
     },
-    {
-      name: "Belgium Flourless Chocolate Cake",
-      price: "149.00",
-      href: "#",
-      imageSrc: BelgiumChocolateCake,
-    },
+    
     {
       name: "Pudding Chocolate Cake",
       price: "500.00",
@@ -163,9 +153,7 @@ function LaveenaShop() {
 
           <main className="mx-auto max-w-7xl px-4  ">
             <section aria-labelledby="products-heading" className="pt-6 pb-24">
-              <h2 id="products-heading" className="sr-only">
-                Products
-              </h2>
+              
 
               <div className="grid grid-cols-1 gap-x-8 gap-y-4 lg:gap-y-10 lg:grid-cols-4">
                 {/* Filters */}
@@ -190,8 +178,8 @@ function LaveenaShop() {
                       </div>
                     </div>
                   </div>
-                  <div className="pt-10  border-[#E1E8ED]">
-                    <form className="hidden lg:block">
+                  <div className="pt-10  border-[#E1E8ED] hidden lg:block">
+                    <form className="">
                       <h3 className="sr-only">Categories</h3>
                       <ul
                         role="list"
@@ -213,6 +201,7 @@ function LaveenaShop() {
                   </div>
                   
                   <div className="pt-5 border-b border-[#E1E8ED] pb-10 hidden lg:block">
+                    
                     <h3 className="text-[18px] font-bold leading-[27px]">
                       กรองตามราคา
                     </h3>
@@ -234,7 +223,7 @@ function LaveenaShop() {
                 {/* Product gridd */}
                 <div className="lg:col-span-3">
                   {/* Replace with your content */}
-                  <div className="flex items-baseline justify-between mb-10">
+                  <div className="flex sm:items-baseline flex-col sm:flex-row items-center justify-between mb-10">
                     <h3 className="text-[#68825B] font-bold text-sm">
                       SHOWING ALL 3 RESULTS
                     </h3>
@@ -243,7 +232,7 @@ function LaveenaShop() {
                         as="div"
                         className="relative inline-block text-left"
                       >
-                        <div className="lg:border border-solid border-green-600 rounded-lg lg:px-5 py-1">
+                        <div className="sm:border border-solid border-green-600 rounded-lg sm:px-[10px] lg:px-5 py-1">
                           <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                             Default Sorting
                             <ChevronDownIcon
@@ -289,7 +278,7 @@ function LaveenaShop() {
 
                       <button
                         type="button"
-                        className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+                        className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 hidden"
                         onClick={() => setMobileFiltersOpen(true)}
                       >
                         <span className="sr-only">Filters</span>
@@ -298,7 +287,7 @@ function LaveenaShop() {
                     </div>
                   </div>
                   <div>
-                  <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-8 lg:gap-x-4">
+                  <div className="mt-3 grid grid-cols-1 place-items-center sm:place-items-start gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-8 lg:gap-x-4">
                     {products.map((product) => (
                       <div key={product.id} className="group relative">
                         <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">

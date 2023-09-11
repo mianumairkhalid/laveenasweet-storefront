@@ -123,7 +123,7 @@ function ContactUs() {
         </div>
       </div>
 
-      <div className="max-w-[636px] mx-5 lg:mx-auto mt-[40px] sm:mt-[80px] lg:mt-[130px]">
+      <div className="max-w-[636px] mx-5 sm:mx-auto mt-[40px] sm:mt-[80px] lg:mt-[130px]">
         <div className="laveena-widget-container">
           <h2 className="text-[36px] sm:text-[48px] font-normal text-[#3c0603] leading-[53px] fontCopperplate">
             We’d love to hear <br />
