@@ -20,11 +20,11 @@ export default function ImageSlider() {
 
   return (
     <div className="mt-5">
-      <div className="relative lg:h-[620px]">
+      <div className="relative lg:max-h-[620px]">
         <img
           src={images[currentSlide]}
           alt="..."
-          className="w-full lg:h-[600px] object-cover rounded"
+          className="w-full lg:max-h-[600px] object-cover rounded"
         />
       </div>
       <div className="mt-2 flex justify-center">

@@ -544,8 +544,8 @@ export default function ProductDetailPage() {
       </Transition.Root>
 
       <main className="mx-auto mt--8 lg:mt-16 px-4 pb-10 sm:px-6 sm:pb-10 lg:mx-[100px] lg:px-8">
-        <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
-          <div className="lg:col-span-5 lg:col-start-8">
+        <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8 flex flex-col productDetailMain">
+          <div className="lg:col-span-5 lg:col-start-8 mt-10 lg:mt-0 productDetail order-2">
             <div className="">
               <h1 className="text-[30px] font-bold text-[#3C0603]">
                 {product.name}
@@ -560,14 +560,14 @@ export default function ProductDetailPage() {
           </div>
 
           {/* Image gallery */}
-          <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+          <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0 order-1 productImage">
             <h2 className="sr-only">Images</h2>
             <ImageSlider />
 
            
           </div>
 
-          <div className="mt-8 lg:col-span-5">
+          <div className="mt-8 lg:col-span-5 productVariations order-3">
             <div>
               {/* Size picker */}
               <div className="mt-8">
@@ -589,7 +589,7 @@ export default function ProductDetailPage() {
                     {" "}
                     Choose a size{" "}
                   </RadioGroup.Label>
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-6">
+                  <div className="grid grid-cols-4 gap-1 sm:grid-cols-6">
                     {product.Flavor.map((size) => (
                       <RadioGroup.Option
                         key={size.name}
@@ -635,7 +635,7 @@ export default function ProductDetailPage() {
                     {" "}
                     Choose a size{" "}
                   </RadioGroup.Label>
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-6">
+                  <div className="grid grid-cols-4 gap-1 sm:grid-cols-6">
                     {product.sizes.map((size) => (
                       <RadioGroup.Option
                         key={size.name}
