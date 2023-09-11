@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from '../components/Slider';
+import Slider from "../components/Slider";
 
 import bannerTop1 from "../img/bannerTop1.png";
 import bannerTop2 from "../img/bannerTop2.png";
@@ -22,12 +22,7 @@ import blogImg1 from "../img/blogImg1.jpeg";
 import blogImg2 from "../img/blogImg2.jpeg";
 import blogImg3 from "../img/blogImg3.jpeg";
 
-
-
 function Home() {
-
-
-
   const products = [
     {
       id: 1,
@@ -71,7 +66,7 @@ function Home() {
       description:
         "จาก…นักออกแบบบรรจุภัณฑ์ สู่…นักออกแบบขนม สู่…ความฝัน QUEEN OF PANDAN",
       date: "06/20/2022",
-      imageUrl:blogImg1,
+      imageUrl: blogImg1,
       author: {
         name: "Roel Aufderehar",
         href: "#",
@@ -87,8 +82,7 @@ function Home() {
         "Belgium Flourless Chocolate Cakeเค้กช็อคโกแล็ต ชื่อ “Flourless Chocolate Cake” หรือเรียกเป็นภาษาฝรั่งเศสว่า “Fondant",
       date: "06/20/2022",
       datetime: "2020-03-10",
-      imageUrl:
-      blogImg2,
+      imageUrl: blogImg2,
       author: {
         name: "Brenna Goyette",
         href: "#",
@@ -100,9 +94,9 @@ function Home() {
       title: "เรื่อง ของ เนย",
       href: "#",
       category: { name: "Case Study", href: "#" },
-      description:"B U T T E R “ เนย “ เกิดจากการเขย่า",
-        date: "06/20/2022",
-      imageUrl:blogImg3,
+      description: "B U T T E R “ เนย “ เกิดจากการเขย่า",
+      date: "06/20/2022",
+      imageUrl: blogImg3,
       author: {
         name: "Daniela Metz",
         href: "#",
@@ -113,13 +107,11 @@ function Home() {
   ];
   return (
     <>
+      <div className="w-full relative block h-[850px]">
+        <Slider />
+      </div>
 
-    
-    <div className="w-full relative block h-[850px]">
-    <Slider />
-    </div>
-
-    <div className="sm:flex my-20 justify-center lg:max-w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
+      <div className="sm:flex my-20 justify-center lg:max-w-[1290px] mx-auto items-center flex-wrap gap-y-7  px-[20px]">
         <div className="lg:w-1/2">
           <img className="rounded-2xl" src={bannerTop1} alt="" />
         </div>
@@ -281,11 +273,13 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               COCONUT FRENCH PIE
             </h3>
+
             <img
               src={COCONUTPIE1}
-              className="md:w-[251px] mx-auto h-[210px] object-cover"
+              className="md:w-[251px] mx-auto max-h-[210px] object-cover"
               alt=""
             />
+
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               149.-
             </h4>
@@ -309,11 +303,13 @@ function Home() {
             <h3 className="mt-5 text-[32px] min-h-[150px] lg:min-h-[300px] leading-[46px] font-bold font-sans">
               SAN KA YA
             </h3>
+
             <img
               src={SanKaYa1}
               className="md:w-[251px] mx-auto h-[210px] object-cover"
               alt=""
             />
+
             <h4 className="text-[48px] leading-[48px] font-bold min-h-[150px] lg:min-h-[200px] text-black mt-5">
               199.-
             </h4>
@@ -338,7 +334,10 @@ function Home() {
 
           <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-10 sm:gap-x-6 lg:grid-cols-4 md:grid-cols-2 md:gap-y-0 lg:gap-x-4 sm:mt-[40px] lg:mt-16">
             {products.map((product) => (
-              <div key={product.id} className="group relative sm:w-auto w-[250px] mx-auto">
+              <div
+                key={product.id}
+                className="group relative sm:w-auto w-[250px] mx-auto"
+              >
                 <div className="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-64">
                   <img
                     src={product.imageSrc}
@@ -373,7 +372,7 @@ function Home() {
       <div className="bg-[#D5828B] py-[60px]">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-center text-[48px] font-normal text-white leading-[53px] fontCopperplate">
-          BIRTHDAY CAKE
+            BIRTHDAY CAKE
           </h2>
           <p className="text-[20px] leading-[30px] text-white text-center mt-[40px] md:px-[150px]">
             Birthday Fresh cream cake from Laveena Cake Box is sure to make
@@ -408,7 +407,6 @@ function Home() {
         </div>
       </div>
 
-
       <div className="relative px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
         <div className="absolute inset-0">
           <div className="h-1/3 bg-white sm:h-2/3" />
@@ -434,22 +432,18 @@ function Home() {
                 </div>
                 <div className="flex flex-1 flex-col justify-between bg-white pt-5">
                   <div className="flex-1">
-                    
                     <a href={post.href} className="mt-2 block">
                       <p className="text-[28px] leading-[46px] font-bold text-[#3c0603]">
                         {post.title}
                       </p>
                       <p className="text-[18px] leading-[23px] font-normal text-[#620d08] mt-2">
-                        <a href={post.href}>
-                          {post.date}
-                        </a>
+                        <a href={post.href}>{post.date}</a>
                       </p>
                       <p className="mt-3 text-xl text-black">
                         {post.description}
                       </p>
                     </a>
                   </div>
-                  
                 </div>
               </div>
             ))}
@@ -532,8 +526,6 @@ function Home() {
         </div>
         <div className="sm:w-1/2 HomeMapSec"></div>
       </div>
-
-      
     </>
   );
 }
