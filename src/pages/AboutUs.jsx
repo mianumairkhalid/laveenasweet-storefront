@@ -89,7 +89,7 @@ function AboutUs() {
         </h2>
       </div>
 
-      <div className="max-w-[980px] mx-auto mt-[100px] hidden md:block md:mx-[20px]">
+      <div className="max-w-[980px] mx-auto mt-[100px] hidden md:block lg:mx-auto md:mx-[20px]">
         <div className="qodef-shortcode qodef-m qodef-qi-timeline qodef-timeline--vertical qodef-timeline-layout--vertical-separated qodef-line--outside qodef-point--diamond qodef-qi--has-appear qodef-reverse-padding qodef-qi--appeared">
           <div className="qodef-e qodef-e-item  elementor-repeater-item-fac96c6 qodef-obverse">
             <div className="qodef-e-line-holder">
