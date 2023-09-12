@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LaveenaLogo from "../img/Laveena-Logo.png";
 import { Popover, Transition, Dialog, Tab } from "@headlessui/react";
 import circleProfile from "../img/circle-profile.png";
@@ -86,6 +86,7 @@ export default function Example() {
 
   const cancelButtonRef = useRef(null);
 
+  const location = useLocation();
   return (
     <Popover className=" bg-[#68825B] sticky top-0 z-10 ">
       <Transition.Root show={open} as={Fragment}>
@@ -239,82 +240,92 @@ export default function Example() {
                             <div className="">
                               <div className="">
                                 <h3 className="text-[20px] font-bold leading-[30px] mb-10 mt-5">
-                                <form className="space-y-8 ">
-                                <div className="space-y-8">
-                                  <div className="">
-                                    <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-                                      <div className="sm:col-span-full">
-                                        <label
-                                          htmlFor="email"
-                                          className="block text-sm font-normal text-[#383838]"
-                                        >
-                                          Username
-                                        </label>
-                                        <div className="mt-1">
-                                          <input
-                                            id="username"
-                                            name="username"
-                                            type="username"
-                                            autoComplete="username"
-                                            className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
-                                          />
+                                  <form className="space-y-8 ">
+                                    <div className="space-y-8">
+                                      <div className="">
+                                        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                                          <div className="sm:col-span-full">
+                                            <label
+                                              htmlFor="email"
+                                              className="block text-sm font-normal text-[#383838]"
+                                            >
+                                              Username
+                                            </label>
+                                            <div className="mt-1">
+                                              <input
+                                                id="username"
+                                                name="username"
+                                                type="username"
+                                                autoComplete="username"
+                                                className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div className="sm:col-span-full">
+                                            <label
+                                              htmlFor="email"
+                                              className="block text-sm font-normal text-[#383838]"
+                                            >
+                                              Email Address
+                                            </label>
+                                            <div className="mt-1">
+                                              <input
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                autoComplete="email"
+                                                className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div className="sm:col-span-full">
+                                            <label
+                                              htmlFor="email"
+                                              className="block text-sm  font-normal text-[#383838]"
+                                            >
+                                              Password
+                                            </label>
+                                            <div className="mt-1">
+                                              <input
+                                                id="password"
+                                                name="password"
+                                                type="password"
+                                                autoComplete="password"
+                                                className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
+                                              />
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
 
-                                      <div className="sm:col-span-full">
-                                        <label
-                                          htmlFor="email"
-                                          className="block text-sm font-normal text-[#383838]"
-                                        >
-                                          Email Address
-                                        </label>
-                                        <div className="mt-1">
-                                          <input
-                                            id="email"
-                                            name="email"
-                                            type="email"
-                                            autoComplete="email"
-                                            className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
-                                          />
-                                        </div>
-                                      </div>
-
-                                      <div className="sm:col-span-full">
-                                        <label
-                                          htmlFor="email"
-                                          className="block text-sm  font-normal text-[#383838]"
-                                        >
-                                          Password
-                                        </label>
-                                        <div className="mt-1">
-                                          <input
-                                            id="password"
-                                            name="password"
-                                            type="password"
-                                            autoComplete="password"
-                                            className="bg-[#ECECEC] h-[40px] block w-full rounded-md border focus:border-[#ECECEC] sm:text-sm"
-                                          />
-                                        </div>
+                                      <div>
+                                        <p className="text-[#383838] text-sm font-normal leading-[23px]">
+                                          Your personal data will be used to
+                                          support your experience throughout
+                                          this website, to manage access to your
+                                          account, and for other purposes
+                                          described in our{" "}
+                                          <a
+                                            href="privacy-policy"
+                                            className="underline"
+                                          >
+                                            privacy policy.
+                                          </a>
+                                        </p>
                                       </div>
                                     </div>
-                                  </div>
 
-                                  <div>
-                                    <p className="text-[#383838] text-sm font-normal leading-[23px]">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="privacy-policy" className="underline">privacy policy.</a></p>
-                                  </div>
-
-                                  
-                                </div>
-
-                                <div className="mt-1">
-                                  <button
-                                    type="submit"
-                                    className="w-full rounded-sm border border-transparent bg-[#D5828B] py-2 mx-0 text-sm font-medium text-white hover:bg-black focus:outline-none "
-                                  >
-                                    Register
-                                  </button>
-                                </div>
-                              </form>
+                                    <div className="mt-1">
+                                      <button
+                                        type="submit"
+                                        className="w-full rounded-sm border border-transparent bg-[#D5828B] py-2 mx-0 text-sm font-medium text-white hover:bg-black focus:outline-none "
+                                      >
+                                        Register
+                                      </button>
+                                    </div>
+                                  </form>
                                 </h3>
                               </div>
                             </div>
@@ -339,25 +350,42 @@ export default function Example() {
         <div className="-my-2 -mr-2 lg:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
-            <svg class="ct-icon fill-[white]" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" data-type="type-1">
-    <rect y="0.00" width="18" height="1.7" rx="1"></rect>
-    <rect y="6.15" width="18" height="1.7" rx="1"></rect>
-    <rect y="12.3" width="18" height="1.7" rx="1"></rect>
-</svg>
+            <svg
+              class="ct-icon fill-[white]"
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              aria-hidden="true"
+              data-type="type-1"
+            >
+              <rect y="0.00" width="18" height="1.7" rx="1"></rect>
+              <rect y="6.15" width="18" height="1.7" rx="1"></rect>
+              <rect y="12.3" width="18" height="1.7" rx="1"></rect>
+            </svg>
           </Popover.Button>
         </div>
-        <Popover.Group as="nav" className="hidden space-x-16 shadow-sm lg:flex">
+        <Popover.Group as="nav" className="hidden space-x-16  lg:flex">
           <Popover className="relative">
             {({ open }) => (
               <>
-                <Popover.Button
+                {/* <Popover.Button
                   className={classNames(
                     open ? "text-gray-900" : "text-gray-500",
                     "group inline-flex items-center rounded-md text-white text-[22px] font-bold hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   )}
                 >
                   <span>Home</span>
-                </Popover.Button>
+                </Popover.Button> */}
+                <Link
+            to="/"
+            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+              location.pathname === "/"
+                ? "text-white font-bold"
+                : ""
+            }`}
+          >
+            Home
+          </Link>
 
                 <Transition
                   as={Fragment}
@@ -421,27 +449,46 @@ export default function Example() {
             )}
           </Popover>
 
+          
           <Link
             to="/product"
-            className="text-black text-[22px] hover:font-bold hover:white"
+            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+              location.pathname === "/product"
+                ? "text-white font-bold"
+                : ""
+            }`}
           >
             Product
           </Link>
+          
           <Link
             to="/blog"
-            className="text-black text-[22px] hover:font-bold hover:white"
+            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+              location.pathname === "/blog"
+                ? "text-white font-bold"
+                : ""
+            }`}
           >
             Blog
           </Link>
+
           <Link
             to="/laveena-about-us"
-            className="text-black text-[22px] hover:font-bold hover:white"
+            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+              location.pathname === "/laveena-about-us"
+                ? "text-white font-bold"
+                : ""
+            }`}
           >
-            About Us
+            About us
           </Link>
           <Link
             to="/branch"
-            className="text-black text-[22px] hover:font-bold hover:white"
+            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+              location.pathname === "/branch"
+                ? "text-white font-bold"
+                : ""
+            }`}
           >
             Contact Us
           </Link>
