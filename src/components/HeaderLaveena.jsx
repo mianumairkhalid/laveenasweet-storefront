@@ -378,10 +378,10 @@ export default function Example() {
                 </Popover.Button> */}
                 <Link
             to="/"
-            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+            className={`text-black text-[22px] hover:font-bold hover:text-white hover:white ${
               location.pathname === "/"
                 ? "text-white font-bold"
-                : ""
+                : "font-light"
             }`}
           >
             Home
@@ -452,10 +452,10 @@ export default function Example() {
           
           <Link
             to="/product"
-            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+            className={`text-black text-[22px]  hover:font-bold hover:text-white hover:white ${
               location.pathname === "/product"
                 ? "text-white font-bold"
-                : ""
+                : "font-light"
             }`}
           >
             Product
@@ -463,10 +463,10 @@ export default function Example() {
           
           <Link
             to="/blog"
-            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+            className={`text-black text-[22px] hover:font-bold hover:text-white hover:white ${
               location.pathname === "/blog"
                 ? "text-white font-bold"
-                : ""
+                : "font-light"
             }`}
           >
             Blog
@@ -474,20 +474,20 @@ export default function Example() {
 
           <Link
             to="/laveena-about-us"
-            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+            className={`text-black text-[22px]  hover:font-bold hover:text-white hover:white ${
               location.pathname === "/laveena-about-us"
                 ? "text-white font-bold"
-                : ""
+                : "font-light"
             }`}
           >
             About us
           </Link>
           <Link
             to="/branch"
-            className={`text-black text-[22px] font-light hover:font-bold hover:text-white hover:white ${
+            className={`text-black text-[22px]  hover:font-bold hover:text-white hover:white ${
               location.pathname === "/branch"
                 ? "text-white font-bold"
-                : ""
+                : "font-light"
             }`}
           >
             Contact Us
