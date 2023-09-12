@@ -232,8 +232,8 @@ function LaveenaShop() {
                         as="div"
                         className="relative inline-block text-left"
                       >
-                        <div className="sm:border border-solid border-green-600 rounded-lg sm:px-[10px] lg:px-5 py-1">
-                          <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                        <div className="sm:border border-solid border-[#68825B] rrounded-lg sm:px-[10px] lg:px-5 py-1">
+                          <Menu.Button className="group inline-flex justify-center text-sm font-medium text-[#68825B] hover:text-gray-900">
                             Default Sorting
                             <ChevronDownIcon
                               className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -260,8 +260,8 @@ function LaveenaShop() {
                                       href={option.href}
                                       className={classNames(
                                         option.current
-                                          ? "font-medium text-gray-900"
-                                          : "text-gray-500",
+                                          ? "font-medium text-[#68825B]"
+                                          : "text-[#68825B]",
                                         active ? "bg-gray-100" : "",
                                         "block px-4 py-2 text-sm"
                                       )}
