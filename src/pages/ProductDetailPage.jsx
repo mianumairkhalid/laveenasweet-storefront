@@ -689,7 +689,7 @@ export default function ProductDetailPage() {
                 </div>
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent hover:bg-[#383838] transition-all duration-200 bg-[#D5828B] py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent hover:bg-[#383838] transition-all duration-200 bg-[#D5828B] py-3 px-8 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   Add to cart
                 </button>
